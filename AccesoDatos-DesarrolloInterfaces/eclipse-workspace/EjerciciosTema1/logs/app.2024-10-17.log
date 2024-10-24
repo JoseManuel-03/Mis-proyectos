@@ -1,0 +1,515 @@
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set autocommit=0
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = OFF
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: COMMIT
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 15:52:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:09:42 DEBUG [main] Ejercicio4.Services.Service -
+				Creando nuevo pedido...
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:09:42 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando..
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set autocommit=0
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = OFF
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:09:42 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando lineas de pedido
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: COMMIT
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:09:42 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:09:42 ERROR [main] Ejercicio4.Services.Service -
+				Error registrando pedido
+java.sql.SQLSyntaxErrorException: (conn=37) executeQuery(String sql) cannot be called on preparedStatement
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:343)
+	at org.mariadb.jdbc.BasePreparedStatement.executeQuery(BasePreparedStatement.java:212)
+	at Ejercicio4.Dao.DaoPedido.consultarPedidos(DaoPedido.java:35)
+	at Ejercicio4.Services.Service.consultarPedido(Service.java:81)
+	at Ejercicio4.app.App.main(App.java:34)
+2024-10-17 16:13:34 DEBUG [main] Ejercicio4.Services.Service -
+				Creando nuevo pedido...
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:13:35 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando..
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set autocommit=0
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = OFF
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:13:35 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando lineas de pedido
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: COMMIT
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:13:35 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:13:35 ERROR [main] Ejercicio4.Services.Service -
+				Error registrando pedido
+java.sql.SQLSyntaxErrorException: (conn=39) executeQuery(String sql) cannot be called on preparedStatement
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:343)
+	at org.mariadb.jdbc.BasePreparedStatement.executeQuery(BasePreparedStatement.java:212)
+	at Ejercicio4.Dao.DaoPedido.consultarPedidos(DaoPedido.java:35)
+	at Ejercicio4.Services.Service.consultarPedido(Service.java:81)
+	at Ejercicio4.app.App.main(App.java:34)
+2024-10-17 16:17:07 DEBUG [main] Ejercicio4.Services.Service -
+				Creando nuevo pedido...
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:17:07 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando..
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set autocommit=0
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = OFF
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:17:07 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando lineas de pedido
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: COMMIT
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:17:07 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: SELECT * FROM pedidos WHERE id_pedido = 46
+2024-10-17 16:17:07 ERROR [main] Ejercicio4.Services.Service -
+				Error registrando pedido
+java.sql.SQLSyntaxErrorException: (conn=41) executeQuery(String sql) cannot be called on preparedStatement
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:343)
+	at org.mariadb.jdbc.BasePreparedStatement.executeQuery(BasePreparedStatement.java:212)
+	at Ejercicio4.Dao.DaoLineaPedido.consultarLineaPedidos(DaoLineaPedido.java:34)
+	at Ejercicio4.Services.Service.consultarPedido(Service.java:85)
+	at Ejercicio4.app.App.main(App.java:34)
+2024-10-17 16:17:17 DEBUG [main] Ejercicio4.Services.Service -
+				Creando nuevo pedido...
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:17:17 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando..
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set autocommit=0
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = OFF
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:17:17 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando lineas de pedido
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:17:17 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: COMMIT
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:17:18 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: SELECT * FROM pedidos WHERE id_pedido = 48
+2024-10-17 16:17:18 ERROR [main] Ejercicio4.Services.Service -
+				Error registrando pedido
+java.sql.SQLTransientConnectionException: (conn=43) Parameter at position 1 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:309)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:354)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:351)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:94)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:257)
+	at Ejercicio4.Dao.DaoLineaPedido.consultarLineaPedidos(DaoLineaPedido.java:34)
+	at Ejercicio4.Services.Service.consultarPedido(Service.java:85)
+	at Ejercicio4.app.App.main(App.java:34)
+2024-10-17 16:43:29 DEBUG [main] Ejercicio4.Services.Service -
+				Creando nuevo pedido...
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:43:29 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando..
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set autocommit=0
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = OFF
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:43:29 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando lineas de pedido
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: COMMIT
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:43:29 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: SELECT * FROM pedidos WHERE id_pedido = 50
+2024-10-17 16:43:29 ERROR [main] Ejercicio4.Services.Service -
+				Error registrando pedido
+java.sql.SQLTransientConnectionException: (conn=48) Parameter at position 1 is not set
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:309)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:354)
+	at org.mariadb.jdbc.ClientPreparedStatement.validParameters(ClientPreparedStatement.java:351)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:94)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:257)
+	at Ejercicio4.Dao.DaoLineaPedido.consultarLineaPedidos(DaoLineaPedido.java:34)
+	at Ejercicio4.Services.Service.consultarPedido(Service.java:85)
+	at Ejercicio4.app.App.main(App.java:34)
+2024-10-17 16:49:59 DEBUG [main] Ejercicio4.Services.Service -
+				Creando nuevo pedido...
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:49:59 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando..
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set autocommit=0
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = OFF
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:49:59 DEBUG [main] Ejercicio4.Services.Service -
+				Insertando lineas de pedido
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos_lineas (id_pedido,numero_linea,articulo,precio) VALUES (?,?,?,?);
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: INSERT INTO pedidos (fecha_pedido,fecha_entrega,cliente) VALUES (?,?,?);
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: COMMIT
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: SELECT * FROM pedidos WHERE id_pedido = 52
+2024-10-17 16:49:59 DEBUG [main] o.m.jdbc.client.impl.StandardClient -
+				execute query: SELECT * FROM pedidos_lineas WHERE id_pedido = 52

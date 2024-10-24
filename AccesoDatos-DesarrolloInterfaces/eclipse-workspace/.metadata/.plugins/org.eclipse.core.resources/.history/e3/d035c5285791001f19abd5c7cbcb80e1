@@ -1,0 +1,166 @@
+package Ejercicio4.app;
+
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+import org.apache.commons.codec.digest.DigestUtils;
+
+import Ejercicio4.Dao.DaoUser;
+import Ejercicio4.Dao.NoHayPeidosException;
+import Ejercicio4.Services.ErrorCambiandoPasswordException;
+import Ejercicio4.Services.HayUsuariosException;
+import Ejercicio4.Services.NoHayUsuariosException;
+import Ejercicio4.Services.PedidosService;
+import Ejercicio4.Services.UserService;
+import Ejercicio4.modelo.LineaPedido;
+import Ejercicio4.modelo.Pedido;
+import Ejercicio4.modelo.Usuario;
+
+public class App {
+
+	public static void main(String[] args) throws SQLException, HayUsuariosException, ErrorCambiandoPasswordException {
+	/*	Pedido pedido = new Pedido();
+		pedido.setFechaPedido(LocalDate.now());
+		pedido.setFechaEntrega(LocalDate.of(2024, 12, 1));
+		pedido.setCliente("Lucas Cangrejo");
+		pedido.setLista(new ArrayList<LineaPedido>());
+
+		for (int j = 1; j <= 3; j++) {
+			LineaPedido linea = new LineaPedido();
+			linea.setArtículo("Artículo " + j);
+			linea.setPrecio(new BigDecimal(938));
+			pedido.getLista().add(linea);
+		}
+
+		PedidosService service = new PedidosService();
+		try {
+			Long idPedido = service.crearPedido(pedido);
+			System.out.println("Pedido registrado con id: " + idPedido);
+
+			Pedido consultado = service.consultarPedido(idPedido);
+			System.out.println(consultado);
+
+		} catch (NoHayPeidosException e) {
+			e.printStackTrace();
+			System.out.println(e);
+		}
+*/
+/*		Usuario user = new Usuario();
+		user.setFechaUltLogin(LocalDate.now());
+		user.setFechaAlta(LocalDate.of(2024, 12, 1));
+
+		UserService service2 = new UserService();
+		try {
+			Usuario user1 = service2.consult(2l);
+			System.out.println(user1);
+			
+			Usuario user2 = service2.registrer(user);
+			System.out.println(user2);
+			
+			Usuario user3 = service2.login(" ", " ");
+			System.out.println(user3);
+			
+			service2.changePass(3l, " ", " ");
+
+		} catch (NoHayUsuariosException e) {
+			e.printStackTrace();
+			System.out.println(e);
+		}
+*/
+
+		    public void testChangePass_Success() throws Exception {
+		        Long idUser = 1L;
+		        String oldPassword = "password";
+		        String newPassword = "newPassword";
+		        Usuario user = new Usuario();
+		        user.setPassword(DigestUtils.sha256Hex(oldPassword));
+
+		        when(DaoUser.getById(Connection, idUser)).thenReturn(user);
+		        
+		        UserService.changePass(idUser, oldPassword, newPassword);
+
+		        verify(DaoUser, times(1)).updateUser(eq(connection), any(Usuario.class));
+		    }
+
+		    @Test
+		    public void testChangePass_IncorrectOldPassword() throws Exception {
+		        Long idUser = 1L;
+		        String oldPassword = "incorrectPassword";
+		        String newPassword = "newPassword";
+		        Usuario user = new Usuario();
+		        user.setPassword(DigestUtils.sha256Hex("password"));
+
+		        when(daoUser.getById(connection, idUser)).thenReturn(user);
+		        
+		        assertThrows(ErrorCambiandoPasswordException.class, () -> {
+		            userService.changePass(idUser, oldPassword, newPassword);
+		        });
+		    }
+
+		    @Test
+		    public void testRegister_Success() throws Exception {
+		        Usuario newUser = new Usuario();
+		        newUser.setUsername("testUser");
+		        newUser.setEmail("test@example.com");
+
+		        when(daoUser.getByUser(connection, "testUser")).thenReturn(null);
+		        when(daoUser.getByEmail(connection, "test@example.com")).thenReturn(null);
+		        when(daoUser.insertUser(connection, newUser)).thenReturn(1L);
+
+		        Usuario registeredUser = userService.registrer(newUser);
+
+		        assertNotNull(registeredUser.getIdUser());
+		        verify(daoUser, times(1)).insertUser(connection, newUser);
+		    }
+
+		    @Test
+		    public void testLogin_Success() throws Exception {
+		        String login = "testUser";
+		        String password = "password";
+		        Usuario user = new Usuario();
+		        user.setUsername(login);
+		        user.setPassword(DigestUtils.sha256Hex(password));
+
+		        when(daoUser.getByUser(connection, login)).thenReturn(user);
+
+		        Usuario loggedInUser = userService.login(login, password);
+
+		        assertNotNull(loggedInUser);
+		        assertEquals(login, loggedInUser.getUsername());
+		    }
+
+		    @Test
+		    public void testLogin_IncorrectPassword() throws Exception {
+		        String login = "testUser";
+		        String password = "incorrectPassword";
+		        Usuario user = new Usuario();
+		        user.setUsername(login);
+		        user.setPassword(DigestUtils.sha256Hex("password"));
+
+		        when(daoUser.getByUser(connection, login)).thenReturn(user);
+
+		        assertThrows(NoHayUsuariosException.class, () -> {
+		            userService.login(login, password);
+		        });
+		    }
+
+		    @Test
+		    public void testConsult_Success() throws Exception {
+		        Long idUser = 1L;
+		        Usuario user = new Usuario();
+		        user.setIdUser(idUser);
+
+		        when(daoUser.getById(connection, idUser)).thenReturn(user);
+
+		        Usuario result = userService.consult(idUser);
+
+		        assertNotNull(result);
+		        assertEquals(idUser, result.getIdUser());
+		    }
+		}
+	}
+	
+
+}

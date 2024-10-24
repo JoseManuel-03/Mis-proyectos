@@ -1,0 +1,60 @@
+package Ejercicio4.app;
+
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+import Ejercicio4.Dao.NoHayPeidosException;
+import Ejercicio4.Services.HayUsuariosException;
+import Ejercicio4.Services.NoHayUsuariosException;
+import Ejercicio4.Services.PedidosService;
+import Ejercicio4.Services.UserService;
+import Ejercicio4.modelo.LineaPedido;
+import Ejercicio4.modelo.Pedido;
+
+public class App {
+
+	public static void main(String[] args) throws SQLException, HayUsuariosException {
+		Pedido pedido = new Pedido();
+		pedido.setFechaPedido(LocalDate.now());
+		pedido.setFechaEntrega(LocalDate.of(2024, 12, 1));
+		pedido.setCliente("Lucas Cangrejo");
+		pedido.setLista(new ArrayList<LineaPedido>());
+
+		for (int j = 1; j <= 3; j++) {
+			LineaPedido linea = new LineaPedido();
+			linea.setArtículo("Artículo " + j);
+			linea.setPrecio(new BigDecimal(938));
+			pedido.getLista().add(linea);
+		}
+
+		PedidosService service = new PedidosService();
+		try {
+			Long idPedido = service.crearPedido(pedido);
+			System.out.println("Pedido registrado con id: " + idPedido);
+
+			Pedido consultado = service.consultarPedido(idPedido);
+			System.out.println(consultado);
+
+		} catch (NoHayPeidosException e) {
+			e.printStackTrace();
+			System.out.println(e);
+		}
+		
+		UserService service2 = new UserService();
+		try {
+			service2.consult(null);
+			service2.registrer(null);
+			service2.login(null, null);
+			service2.changePass(null, null, null);
+			
+			
+		}catch (NoHayUsuariosException e) {
+			e.printStackTrace();
+			System.out.println(e);
+		}
+
+	}
+
+}
