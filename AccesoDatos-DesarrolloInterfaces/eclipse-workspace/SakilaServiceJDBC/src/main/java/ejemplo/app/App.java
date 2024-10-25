@@ -8,7 +8,7 @@ public class App {
 		Politico p = new Politico();
 		p.getAfiliación();
 		p.getNombre();
-
+		
 	}
 
 }
