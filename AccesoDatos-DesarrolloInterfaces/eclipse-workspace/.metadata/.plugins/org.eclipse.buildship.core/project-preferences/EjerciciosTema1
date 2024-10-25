@@ -1,12 +1,12 @@
 #
-#Thu Oct 24 19:45:49 CEST 2024
-buildDir=build
-buildScriptPath=build.gradle
-classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
+#Fri Oct 25 11:56:05 CEST 2024
 derivedResources=.gradle;build
-gradleVersion=8.1.1
-hasAutoBuildTasks=false
 linkedResources=
-managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
 managedNatures=
+buildDir=build
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+buildScriptPath=build.gradle
 subprojectPaths=
+hasAutoBuildTasks=false
+gradleVersion=8.1.1

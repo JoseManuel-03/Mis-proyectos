@@ -6,6 +6,14 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\PSP\PSP-workspace\PSP-tema1-ejemplos01"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\PSP\PSP-workspace\PSP-SimulacionCajeros"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\PSP\PSP-workspace\PSP-lanzabolas"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\PSP\PSP-workspace\PSP-Emisor"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\PSP\PSP-workspace\PSP-colores"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\PSP\PSP-workspace\PSP-BotellaDeCaracteres"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\PSP\PSP-workspace\PSP_Entradas"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\PSP\PSP-workspace\OrdoñezJoseManuelPSP01"/>
 			<item value="C:\Users\jordonez5404\Desktop\PSP-workspace\PSP-tema1-ejemplos01"/>
 			<item value="C:\Users\jordonez5404\Desktop\PSP-workspace\PSP-SimulacionCajeros"/>
 			<item value="C:\Users\jordonez5404\Desktop\PSP-workspace\PSP-lanzabolas"/>
@@ -28,5 +36,11 @@
 			<item key="DIALOG_HEIGHT" value="629"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="389"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

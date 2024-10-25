@@ -21,7 +21,6 @@
     <fullyQualifiedTypeName name="paquete.Botella"/>
     <fullyQualifiedTypeName name="paquete.LanzadorThread"/>
     <fullyQualifiedTypeName name="paquete.Luciernaga"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="Ejercicio2.services.Dao"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="ejemplo1.gui.LoginPantalla"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
 </qualifiedTypeNameHistroy>

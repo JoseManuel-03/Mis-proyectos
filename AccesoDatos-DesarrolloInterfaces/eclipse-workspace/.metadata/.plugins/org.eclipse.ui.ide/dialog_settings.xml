@@ -15,6 +15,12 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\Swing"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\SakilaServiceJDBC"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\PruebaStream"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\EjerciciosTema1"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\EjemploSwing"/>
+			<item value="C:\Users\jmcor\OneDrive\Escritorio\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\EjemploService"/>
 			<item value="C:\Users\jordonez5404\Desktop\eclipse-workspace\Swing"/>
 			<item value="C:\Users\jordonez5404\OneDrive - Fundación Universitaria San Pablo CEU\Programacion 2º\Chuleta"/>
 			<item value="C:\Users\jordonez5404\eclipse-workspace\PSP-tema1-ejemplos01"/>
@@ -36,8 +42,8 @@
 		</list>
 	</section>
 	<section name="CleanDialogSettings">
-		<item key="TOGGLE_SELECTED" value="false"/>
-		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="TOGGLE_SELECTED" value="true"/>
+		<item key="DIALOG_WIDTH" value="499"/>
 		<item key="DIALOG_HEIGHT" value="389"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
