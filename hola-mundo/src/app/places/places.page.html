@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>{{titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let i of places" [routerLink]="['/places', i.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="i.imageUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{i.title}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" (click)="newPlace()">
+      <ion-icon name="add"></ion-icon><p>NEW</p>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
