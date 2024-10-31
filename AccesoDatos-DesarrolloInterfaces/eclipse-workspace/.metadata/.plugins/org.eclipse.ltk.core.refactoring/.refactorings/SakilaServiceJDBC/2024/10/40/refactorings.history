@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move package &apos;dao&apos; to &apos;accesoDatos/src&apos;&#x0D;&#x0A;- Original project: &apos;SakilaServiceJDBC&apos;&#x0D;&#x0A;- Destination element: &apos;accesoDatos/src&apos;&#x0D;&#x0A;- Original element: &apos;SakilaServiceJDBC/src/main/java/dao&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=accesoDatos/src=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;dao" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1727805512161" version="1.0"/>
-</session>
