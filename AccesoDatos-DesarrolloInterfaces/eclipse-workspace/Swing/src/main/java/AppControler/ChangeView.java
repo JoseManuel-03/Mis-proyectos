@@ -1,6 +1,7 @@
 package AppControler;
 
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -8,68 +9,67 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.UIManager;
 
+import ejercicios.ejercicio05.model.User;
+import ejercicios.ejercicio05.service.UserException;
+import ejercicios.ejercicio05.service.UserNotFoundException;
+import ejercicios.ejercicio05.service.UserUnauthorizedException;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 
 public class ChangeView extends JPanel {
 
-	private static final long serialVersionUID = 1L;
-	protected App appController;
-	private JTextField textField_3;
-	private JTextField textField_2;
-	private JTextField textField_4;
-
-	/**
-	 * Create the panel.
-	 */
-	public ChangeView(App appController) {
-		this.appController = appController;
-		setLayout(null);
-
-		JLabel lblNuevaContrasea = new JLabel("Nueva Contraseña");
-		lblNuevaContrasea.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblNuevaContrasea.setBounds(139, 121, 124, 14);
-		add(lblNuevaContrasea);
-
-		JLabel lblConfirmarNuevaContrasea = new JLabel("Confirmar nueva contraseña");
-		lblConfirmarNuevaContrasea.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblConfirmarNuevaContrasea.setBounds(139, 166, 165, 14);
-		add(lblConfirmarNuevaContrasea);
-
-		JLabel lblAntiguaContrasea = new JLabel("Antigua Contraseña");
-		lblAntiguaContrasea.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblAntiguaContrasea.setBounds(139, 77, 135, 14);
-		add(lblAntiguaContrasea);
-
-		JLabel lblCambiaTuContrasea = new JLabel("Cambia tu contraseña");
-		lblCambiaTuContrasea.setForeground(Color.RED);
-		lblCambiaTuContrasea.setFont(new Font("Times New Roman", Font.BOLD, 21));
-		lblCambiaTuContrasea.setBounds(118, 19, 209, 33);
-		add(lblCambiaTuContrasea);
-
-		JButton btnConfirmar = new JButton("Confirmar ");
-		btnConfirmar.setForeground(UIManager.getColor("Button.light"));
-		btnConfirmar.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		btnConfirmar.setBackground(Color.RED);
-		btnConfirmar.setBounds(165, 225, 109, 23);
-		add(btnConfirmar);
-
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(108, 90, 219, 20);
-		add(textField_3);
-
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(108, 135, 219, 20);
-		add(textField_2);
-
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(108, 179, 219, 20);
-		add(textField_4);
-
+		private static final long serialVersionUID = 1L;
+		private JPasswordField passwordFieldActual;
+		private JPasswordField passwordFieldNueva;
+		private App appControler;
+		private User user = new User();
+		/**
+		 * Create the panel.
+		 */
+		public ChangeView(App appControler) {
+			
+			this.appControler = appControler;
+			setLayout(null);
+			
+			JLabel lblNewLabel = new JLabel("Contraseña actual:");
+			lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 13));
+			lblNewLabel.setBounds(29, 103, 132, 14);
+			add(lblNewLabel);
+			JLabel lblNewLabel_1 = new JLabel("Contraseña nueva:");
+			lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 13));
+			lblNewLabel_1.setBounds(29, 172, 115, 14);
+			add(lblNewLabel_1);
+			JLabel LabelTitulo = new JLabel("Change Password");
+			LabelTitulo.setForeground(new Color(255, 0, 0));
+			LabelTitulo.setFont(new Font("Times New Roman", Font.BOLD, 22));
+			LabelTitulo.setBounds(113, 10, 233, 63);
+			add(LabelTitulo);
+			passwordFieldActual = new JPasswordField();
+			passwordFieldActual.setBounds(167, 100, 164, 20);
+			add(passwordFieldActual);
+			passwordFieldNueva = new JPasswordField();
+			passwordFieldNueva.setBounds(167, 169, 164, 20);
+			add(passwordFieldNueva);
+			JButton btnNewButton = new JButton("Cambia la contraseña");
+			btnNewButton.setBackground(new Color(255, 0, 0));
+			btnNewButton.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					String passwordBien1 = new String(passwordFieldActual.getPassword());
+					String passwordBien2 = new String(passwordFieldNueva.getPassword());
+					appControler.metodoContraseña(user.getId(), passwordBien1, passwordBien2);
+					//appControler.servicioChangePassword(user.getId(), passwordBien1, passwordBien2);
+				}
+			});
+			btnNewButton.setBounds(123, 248, 187, 23);
+			add(btnNewButton);
+	 
+		}
+		public void actualizarUser(User user) {
+			this.user = user;
+		}
 	}
-	public void setTextoContraseña(String texto) {
-		textField_3.setText(texto);
-	}
-
-}

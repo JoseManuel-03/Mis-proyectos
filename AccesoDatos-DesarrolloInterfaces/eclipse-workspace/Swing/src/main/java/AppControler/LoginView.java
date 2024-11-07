@@ -1,6 +1,7 @@
 package AppControler;
 
 import javax.swing.JPanel;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.Font;
@@ -8,7 +9,11 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.UIManager;
 
-import Ejercicio4.Services.NoHayUsuariosException;
+import ejercicios.ejercicio05.model.User;
+import ejercicios.ejercicio05.service.UserException;
+import ejercicios.ejercicio05.service.UserNotFoundException;
+import ejercicios.ejercicio05.service.UserServiceImpl;
+import ejercicios.ejercicio05.service.UserUnauthorizedException;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -21,12 +26,14 @@ public class LoginView extends JPanel {
 	protected App appController;
 	private JTextField textFieldContrase;
 	private JTextField textFieldUserEmail;
-
+	private User user = new User();
+	protected UserServiceImpl servie;
 	/**
 	 * Create the panel.
 	 */
 	public LoginView(App appController) {
 		this.appController = appController;
+		servie= new UserServiceImpl();
 		setLayout(null);
 
 		JLabel lblContraseña = new JLabel("Contraseña");
@@ -44,21 +51,33 @@ public class LoginView extends JPanel {
 		lblUsernameEmail.setBounds(132, 95, 86, 14);
 		add(lblUsernameEmail);
 
-		textFieldUserEmail = new JTextField();
+		textFieldUserEmail = new JMyTextField();
 		textFieldUserEmail.setColumns(10);
 		textFieldUserEmail.setBounds(132, 109, 219, 20);
 		add(textFieldUserEmail);
 
 		JLabel lblLogin = new JLabel("Login ");
-		lblLogin.setForeground(Color.RED);
-		lblLogin.setFont(new Font("Times New Roman", Font.BOLD, 21));
-		lblLogin.setBounds(191, 22, 57, 58);
+		lblLogin.setForeground(new Color(255, 0, 0));
+		lblLogin.setFont(new Font("Times New Roman", Font.BOLD, 22));
+		lblLogin.setBounds(191, 22, 86, 58);
 		add(lblLogin);
 
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				appController.mostrarPerfil(textFieldUserEmail.getText());
+				try {
+					user = servie.login(textFieldUserEmail.getText(), textFieldContrase.getText());
+				} catch (UserNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (UserUnauthorizedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (UserException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				appController.mostrarPerfil(user);
 			}
 		});
 		btnLogin.setForeground(UIManager.getColor("Button.light"));
@@ -83,26 +102,7 @@ public class LoginView extends JPanel {
 		btnCrear.setBounds(234, 249, 106, 14);
 		add(btnCrear);
 
-		JLabel lblolvidaste = new JLabel("¿Olvidaste tu contraseña?");
-		lblolvidaste.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				try {
-					appController.metodoLogin(textFieldContrase.getText(),
-							textFieldContrase.getText());
-				} catch (NoHayUsuariosException e1) {
-					e1.printStackTrace();
-				}
-				appController.mostrarContraseña(textFieldUserEmail.getText());
-			}
-		});
-		lblolvidaste.setFont(new Font("Times New Roman", Font.PLAIN, 12));
-		lblolvidaste.setBounds(228, 185, 123, 14);
-		add(lblolvidaste);
-
 	}
 
-	public void setTextoLogin(String texto) {
-		textFieldContrase.setText(texto);
-	}
+	
 }

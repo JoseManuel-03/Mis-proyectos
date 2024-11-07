@@ -1,28 +1,30 @@
 package AppControler;
 
 import java.awt.EventQueue;
+import java.time.LocalDate;
 
 import javax.swing.JFrame;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import Ejercicio4.Modelo.Usuario;
-import Ejercicio4.Services.ErrorCambiandoPasswordException;
-import Ejercicio4.Services.HayUsuariosException;
-import Ejercicio4.Services.NoHayUsuariosException;
-import Ejercicio4.Services.UserService;
+import ejercicios.ejercicio05.model.User;
+import ejercicios.ejercicio05.service.UserException;
+import ejercicios.ejercicio05.service.UserNotFoundException;
+import ejercicios.ejercicio05.service.UserServiceImpl;
+import ejercicios.ejercicio05.service.UserUnauthorizedException;
 
 public class App {
 
-	private static final Logger log = LoggerFactory.getLogger(UserService.class);
+	private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
 	private JFrame frame;
 	private RegisterView registrar;
 	private LoginView login;
 	private ProfileView perfil;
 	private ChangeView contraseña;
-	private UserService services = new UserService();
+	private UserServiceImpl services = new UserServiceImpl();
+	private User userNew;
 
 	/**
 	 * Launch the application.
@@ -54,6 +56,7 @@ public class App {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		userNew = new User();
 
 		registrar = new RegisterView(this);
 		login = new LoginView(this);
@@ -66,7 +69,7 @@ public class App {
 	public void mostrarRegistrar(String texto) {
 		frame.setContentPane(registrar);
 		frame.revalidate();
-		registrar.setTextoRegister(texto);
+
 	}
 
 	public void mostrarLogin() {
@@ -74,47 +77,48 @@ public class App {
 		frame.revalidate();
 	}
 
-	public void mostrarPerfil(String texto) {
+	public void mostrarPerfil(User user) {
 		frame.setContentPane(perfil);
-		perfil.setTextoPerfil(texto);
+		if (user !=null) {
+			perfil.actualizarUser(user);			
+		}
 		frame.revalidate();
 	}
 
-	public void mostrarContraseña(String texto) {
+	public void mostrarContraseña(User user) {
 		frame.setContentPane(contraseña);
-		contraseña.setTextoContraseña(texto);
+		contraseña.actualizarUser(user);
 		frame.revalidate();
 	}
 
-	public void metodoContraseña(Long id, String antiguaConstraseña, String nuevaContraseña)
-			throws ErrorCambiandoPasswordException {
-		services.changePass(id, antiguaConstraseña, nuevaContraseña);
-	}
-
-	public void metodoPerfil(Long id) throws NoHayUsuariosException {
-		perfil.actualizarUsuario(null);
-		services.consult(id);
-	}
-
-	public void metodoLogin(String usuario, String contraseña) throws NoHayUsuariosException {
+	public void metodoContraseña(Long id, String antiguaContraseña, String nuevaContraseña) {
 		try {
-			services.login(usuario, contraseña);
-		} catch (Exception e) {
-			log.error("Error en el login", e);
+			services.changePassword(id, antiguaContraseña, nuevaContraseña);
+		} catch (UserNotFoundException e) {
+
+			e.printStackTrace();
+		} catch (UserUnauthorizedException e) {
+
+			e.printStackTrace();
+		} catch (UserException e) {
+
+			e.printStackTrace();
 		}
 	}
 
-	public void metodoRegistrar(String username, String email, String password) throws HayUsuariosException {
-		try {
 
-			Usuario user = new Usuario();
+	public User metodoRegistrar(String username, String email, String password) {
+		try {
+			User user = new User();
 			user.setUsername(username);
 			user.setEmail(email);
 			user.setPassword(password);
+			user.setCreatedDate(LocalDate.now());
 
-			services.registrer(user);
+			return user = services.createUser(user);
 		} catch (Exception e) {
 			log.error("Error en el registro", e);
 		}
+		return null;
 	}
 }

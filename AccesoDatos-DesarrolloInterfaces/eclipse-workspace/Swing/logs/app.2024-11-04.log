@@ -1,0 +1,1475 @@
+2024-11-04 16:26:32 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Creando nuevo usuario: User(id=null, username=Prueba1, email=prueba1@gmail.com, password=prueba1, createdDate=null, lastLoginDate=null)
+2024-11-04 16:26:32 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1045-28000: Access denied for user 'pedidos'@'localhost' (using password: YES)
+2024-11-04 16:26:32 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error creando usuario 
+java.sql.SQLInvalidAuthorizationSpecException: (conn=286) Access denied for user 'pedidos'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at ejercicios.ejercicio01.services.Service.abrirConexion(Service.java:32)
+	at ejercicios.ejercicio01.services.Service.abrirConexionPedidos(Service.java:21)
+	at ejercicios.ejercicio05.service.UserServiceImpl.createUser(UserServiceImpl.java:28)
+	at AppControler.App.metodoRegistrar(App.java:116)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:90)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 16:26:32 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el registro
+ejercicios.ejercicio05.service.UserException: Error registrando usuario
+	at ejercicios.ejercicio05.service.UserServiceImpl.createUser(UserServiceImpl.java:54)
+	at AppControler.App.metodoRegistrar(App.java:116)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:90)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 16:31:55 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Creando nuevo usuario: User(id=null, username=prueba1, email=prueba1@gmail.com, password=prueba1, createdDate=null, lastLoginDate=null)
+2024-11-04 16:31:55 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'password' in 'field list'
+2024-11-04 16:31:55 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error creando usuario 
+java.sql.SQLSyntaxErrorException: (conn=290) Unknown column 'password' in 'field list'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:237)
+	at ejercicios.ejercicio05.dao.UserDao.insert(UserDao.java:22)
+	at ejercicios.ejercicio05.service.UserServiceImpl.createUser(UserServiceImpl.java:47)
+	at AppControler.App.metodoRegistrar(App.java:116)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:90)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 16:31:55 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el registro
+ejercicios.ejercicio05.service.UserException: Error registrando usuario
+	at ejercicios.ejercicio05.service.UserServiceImpl.createUser(UserServiceImpl.java:55)
+	at AppControler.App.metodoRegistrar(App.java:116)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:90)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 16:38:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Creando nuevo usuario: User(id=null, username=pablito, email=pablito@elguay.com, password=elpablito, createdDate=null, lastLoginDate=null)
+2024-11-04 16:38:52 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'password' in 'field list'
+2024-11-04 16:38:52 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error creando usuario 
+java.sql.SQLSyntaxErrorException: (conn=291) Unknown column 'password' in 'field list'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:237)
+	at ejercicios.ejercicio05.dao.UserDao.insert(UserDao.java:22)
+	at ejercicios.ejercicio05.service.UserServiceImpl.createUser(UserServiceImpl.java:47)
+	at AppControler.App.metodoRegistrar(App.java:116)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:90)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 16:38:52 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el registro
+ejercicios.ejercicio05.service.UserException: Error registrando usuario
+	at ejercicios.ejercicio05.service.UserServiceImpl.createUser(UserServiceImpl.java:55)
+	at AppControler.App.metodoRegistrar(App.java:116)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:90)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 16:39:44 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Creando nuevo usuario: User(id=null, username=prueba, email=prueba@gmail.com, password=prueba, createdDate=null, lastLoginDate=null)
+2024-11-04 16:39:44 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Usuario creado con éxito con id 3
+2024-11-04 16:43:52 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario 
+2024-11-04 16:43:52 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 16:43:52 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 16:43:52 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - No existe usuario (email o username)
+2024-11-04 16:43:52 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el login
+ejercicios.ejercicio05.service.UserNotFoundException: No existe usuario con el login indicado
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:109)
+	at AppControler.App.metodoLogin(App.java:102)
+	at AppControler.LoginView$3.mouseClicked(LoginView.java:89)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6624)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4584)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 17:01:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario 
+2024-11-04 17:01:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 17:01:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 17:01:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - No existe usuario (email o username)
+2024-11-04 17:01:27 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el login
+ejercicios.ejercicio05.service.UserNotFoundException: No existe usuario con el login indicado
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:109)
+	at AppControler.App.metodoLogin(App.java:121)
+	at AppControler.LoginView$3.mouseClicked(LoginView.java:89)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6624)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4584)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 17:01:45 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario 
+2024-11-04 17:01:45 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 17:01:45 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 17:01:45 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - No existe usuario (email o username)
+2024-11-04 17:01:45 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el login
+ejercicios.ejercicio05.service.UserNotFoundException: No existe usuario con el login indicado
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:109)
+	at AppControler.App.metodoLogin(App.java:121)
+	at AppControler.LoginView$3.mouseClicked(LoginView.java:89)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6624)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4584)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 17:01:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario 
+2024-11-04 17:01:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 17:01:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 17:01:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - No existe usuario (email o username)
+2024-11-04 17:01:56 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el login
+ejercicios.ejercicio05.service.UserNotFoundException: No existe usuario con el login indicado
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:109)
+	at AppControler.App.metodoLogin(App.java:121)
+	at AppControler.LoginView$3.mouseClicked(LoginView.java:89)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6624)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4584)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 17:16:17 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario 
+2024-11-04 17:16:17 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 17:16:17 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 17:16:17 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - No existe usuario (email o username)
+2024-11-04 17:16:17 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el login
+ejercicios.ejercicio05.service.UserNotFoundException: No existe usuario con el login indicado
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:109)
+	at AppControler.App.metodoLogin(App.java:121)
+	at AppControler.LoginView$3.mouseClicked(LoginView.java:89)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6624)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4584)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 17:16:42 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizacion password de usuario con id: null
+2024-11-04 17:16:45 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizacion password de usuario con id: null
+2024-11-04 17:18:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario 
+2024-11-04 17:18:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 17:18:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 17:18:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - No existe usuario (email o username)
+2024-11-04 17:18:50 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el login
+ejercicios.ejercicio05.service.UserNotFoundException: No existe usuario con el login indicado
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:109)
+	at AppControler.App.metodoLogin(App.java:121)
+	at AppControler.LoginView$3.mouseClicked(LoginView.java:89)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6624)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4584)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 17:19:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario 
+2024-11-04 17:19:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 17:19:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 17:19:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - No existe usuario (email o username)
+2024-11-04 17:19:01 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el login
+ejercicios.ejercicio05.service.UserNotFoundException: No existe usuario con el login indicado
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:109)
+	at AppControler.App.metodoLogin(App.java:121)
+	at AppControler.LoginView$3.mouseClicked(LoginView.java:89)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6624)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4584)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 17:19:59 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizacion password de usuario con id: null
+2024-11-04 17:24:04 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizacion password de usuario con id: null
+2024-11-04 17:34:00 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Creando nuevo usuario: User(id=null, username=prueba2, email=prueba2@gmail.com, password=prueba, createdDate=null, lastLoginDate=null)
+2024-11-04 17:34:00 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Usuario creado con éxito con id 4
+2024-11-04 17:47:26 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 17:47:26 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 17:47:26 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 17:47:26 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando pass de usuario 
+java.sql.SQLException: Unknown label 'id'. Possible value [iduser, password, fecha_ult_login, usuarios.username, usuarios.email, usuarios.iduser, fecha_alta, usuarios.password, usuarios.fecha_alta, usuarios.fecha_ult_login, email, username]
+	at org.mariadb.jdbc.client.result.Result.findColumn(Result.java:1749)
+	at org.mariadb.jdbc.client.result.Result.getLong(Result.java:712)
+	at ejercicios.ejercicio05.dao.UserDao.getUser(UserDao.java:74)
+	at ejercicios.ejercicio05.dao.UserDao.getByUserName(UserDao.java:53)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:105)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:60)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 17:47:26 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el login
+ejercicios.ejercicio05.service.UserException: Error actualizando usuario
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:133)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:60)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:25 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:25 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=306) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:03:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:50 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:50 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=307) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:51 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:51 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=308) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:51 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:51 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=309) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:51 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:51 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=310) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:56 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:56 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=311) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:56 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:56 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=312) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:57 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:57 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=313) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:03:57 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:03:57 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=314) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:03:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:05:31 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:05:31 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:05:31 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:05:31 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:05:31 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:10:08 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:10:08 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:10:08 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:10:08 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:10:08 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1054-42S22: Unknown column 'id' in 'where clause'
+2024-11-04 18:10:08 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error actualizando fecha último login del usuario 
+java.sql.SQLSyntaxErrorException: (conn=316) Unknown column 'id' in 'where clause'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:313)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:290)
+	at ejercicios.ejercicio05.dao.UserDao.update(UserDao.java:66)
+	at ejercicios.ejercicio05.service.UserServiceImpl.login(UserServiceImpl.java:123)
+	at AppControler.App.metodoLogin(App.java:120)
+	at AppControler.LoginView$1.actionPerformed(LoginView.java:63)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:10:08 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:10:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:10:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:10:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:10:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:10:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:12:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:12:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:12:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:12:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:12:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:16:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:16:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:16:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:16:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:16:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:18:26 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:18:26 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:18:26 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:18:26 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:18:26 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:19:34 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:19:34 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:19:34 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:19:34 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:19:34 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:25:20 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:25:20 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:25:20 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:25:20 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:25:20 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:27:00 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:27:00 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:27:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:27:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:27:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:28:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:28:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:28:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:28:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:28:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:32:04 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:32:04 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:32:04 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:32:04 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:32:04 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:38:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:38:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:38:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:38:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:38:01 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:41:27 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Creando nuevo usuario: User(id=null, username=prueba2, email=prueba2@sc, password=prueba2, createdDate=null, lastLoginDate=null)
+2024-11-04 18:41:28 WARN  [AWT-EventQueue-0] o.m.jdbc.message.server.ErrorPacket - Error: 1062-23000: Duplicate entry 'prueba2' for key 'username'
+2024-11-04 18:41:28 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error creando usuario 
+java.sql.SQLIntegrityConstraintViolationException: (conn=327) Duplicate entry 'prueba2' for key 'username'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:297)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:189)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1235)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1174)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1093)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1017)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:101)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:237)
+	at ejercicios.ejercicio05.dao.UserDao.insert(UserDao.java:22)
+	at ejercicios.ejercicio05.service.UserServiceImpl.createUser(UserServiceImpl.java:47)
+	at AppControler.App.metodoRegistrar(App.java:133)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:92)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:41:28 ERROR [AWT-EventQueue-0] e.e.service.UserServiceImpl - Error en el registro
+ejercicios.ejercicio05.service.UserException: Error registrando usuario
+	at ejercicios.ejercicio05.service.UserServiceImpl.createUser(UserServiceImpl.java:55)
+	at AppControler.App.metodoRegistrar(App.java:133)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:92)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-11-04 18:41:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:41:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:41:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:41:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:41:57 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:43:41 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:43:42 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:43:42 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:43:42 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:43:42 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:45:24 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:45:24 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:45:24 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:45:24 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:45:24 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:45:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:45:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:45:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:45:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:45:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:51:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:51:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:51:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:51:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:51:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:52:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:52:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:52:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:52:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:52:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:52:33 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:52:33 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:52:33 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:52:33 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:52:33 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:54:37 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:54:37 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:54:37 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:54:37 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:54:37 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:55:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:55:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:55:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:55:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:55:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:58:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:58:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:58:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:58:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:58:51 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 18:59:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 18:59:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 18:59:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 18:59:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 18:59:56 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 19:02:40 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 19:02:41 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 19:02:41 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 19:02:41 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 19:02:41 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 19:03:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 19:03:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 19:03:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 19:03:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 19:03:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 19:20:52 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 19:20:53 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 19:20:53 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 19:20:53 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 19:20:53 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 19:42:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 19:42:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 19:42:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 19:42:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 19:42:50 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 19:51:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 19:51:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 19:51:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 19:51:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 19:51:11 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 19:51:25 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizacion password de usuario con id: null
+2024-11-04 19:51:31 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizacion password de usuario con id: null
+2024-11-04 19:52:59 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 19:52:59 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 19:52:59 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 19:52:59 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 19:52:59 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 19:53:10 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizacion password de usuario con id: 3
+2024-11-04 19:53:10 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Password cambiada con exito
+2024-11-04 19:59:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 19:59:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 19:59:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 19:59:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 19:59:18 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 20:00:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 20:00:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 20:00:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 20:00:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 20:00:23 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 20:00:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 20:00:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 20:00:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 20:00:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 20:00:46 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto
+2024-11-04 20:01:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario 
+2024-11-04 20:01:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 20:01:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 20:01:54 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - No existe usuario (email o username)
+2024-11-04 20:02:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Realizando login con usuario prueba
+2024-11-04 20:02:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por email...
+2024-11-04 20:02:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Intentando login por username...
+2024-11-04 20:02:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Actualizando fecha de último login
+2024-11-04 20:02:05 DEBUG [AWT-EventQueue-0] e.e.service.UserServiceImpl - Login correcto

@@ -2,9 +2,10 @@ package AppControler;
 
 import javax.swing.JPanel;
 
+
 import javax.swing.JTextField;
 
-import Ejercicio4.Services.HayUsuariosException;
+import ejercicios.ejercicio05.model.User;
 
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -17,6 +18,7 @@ public class RegisterView extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	protected App appController;
+	private User user = new User();
 	private JTextField textFieldUsername;
 	private JTextField textFieldEmail;
 	private JTextField textFieldContraseña;
@@ -56,8 +58,8 @@ public class RegisterView extends JPanel {
 
 		lblCrearCuenta = new JLabel("Crea tu cuenta");
 		lblCrearCuenta.setForeground(new Color(255, 0, 0));
-		lblCrearCuenta.setFont(new Font("Times New Roman", Font.BOLD, 17));
-		lblCrearCuenta.setBounds(153, 17, 135, 33);
+		lblCrearCuenta.setFont(new Font("Times New Roman", Font.BOLD, 22));
+		lblCrearCuenta.setBounds(128, 17, 179, 33);
 		add(lblCrearCuenta);
 
 		lblContraseña = new JLabel("Contraseña");
@@ -86,13 +88,11 @@ public class RegisterView extends JPanel {
 		btnCrearCuenta.setForeground(new Color(227, 227, 227));
 		btnCrearCuenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					try {
-						appController.metodoRegistrar(textFieldUsername.getText(), textFieldEmail.getText(),
-								textFieldContraseña.getText());
-					} catch (HayUsuariosException e1) {
-						e1.printStackTrace();
-					}
-				appController.mostrarPerfil(textFieldUsername.getText());
+
+				appController.metodoRegistrar(textFieldUsername.getText(), textFieldEmail.getText(),
+						textFieldContraseña.getText());
+
+				appController.mostrarPerfil(user);
 			}
 		});
 		btnCrearCuenta.setBounds(153, 253, 109, 23);

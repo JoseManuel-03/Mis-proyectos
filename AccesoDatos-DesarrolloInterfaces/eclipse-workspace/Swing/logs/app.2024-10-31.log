@@ -1,0 +1,123 @@
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-31 17:35:02 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-31 17:35:02 ERROR [AWT-EventQueue-0] Ejercicio4.Services.UserService -
+				Error en el registro
+java.lang.NullPointerException: Cannot invoke "Ejercicio4.Dao.DaoUser.getByUser(java.sql.Connection, String)" because "this.daoUser" is null
+	at Ejercicio4.Services.UserService.registrer(UserService.java:45)
+	at AppControler.App.metodoRegistrar(App.java:110)
+	at AppControler.RegisterView$1.actionPerformed(RegisterView.java:90)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  autocommit = ON
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  time_zone = SYSTEM
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = latin1
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = latin1
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = latin1
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  redirect_url = 
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				Database change: is 'pedidos'
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.client.impl.StandardClient -
+				execute query: set sql_mode=CONCAT(@@sql_mode,',STRICT_TRANS_TABLES'),session_track_system_variables = CONCAT(@@global.session_track_system_variables,',transaction_isolation'),NAMES utf8mb4
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_client = utf8mb4
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_connection = utf8mb4
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] o.m.jdbc.message.server.OkPacket -
+				System variable change:  character_set_results = utf8mb4
+2024-10-31 17:43:23 DEBUG [AWT-EventQueue-0] Ejercicio4.Services.PedidosService -
+				Logeando usuario
+2024-10-31 17:43:23 ERROR [AWT-EventQueue-0] Ejercicio4.Services.UserService -
+				Error en el login
+java.lang.NullPointerException: Cannot invoke "Ejercicio4.Dao.DaoUser.getByUser(java.sql.Connection, String)" because "this.daoUser" is null
+	at Ejercicio4.Services.UserService.login(UserService.java:73)
+	at AppControler.App.metodoLogin(App.java:100)
+	at AppControler.LoginView$3.mouseClicked(LoginView.java:91)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6624)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4584)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
