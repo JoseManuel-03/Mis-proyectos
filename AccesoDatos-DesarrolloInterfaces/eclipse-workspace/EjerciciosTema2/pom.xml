@@ -13,8 +13,8 @@
 		</dependency>
 		<dependency>
 			<groupId>ceu.dam.ad</groupId>
-			<artifactId>EjerciciosTema1</artifactId>
-			<version>1.0.0</version>
+			<artifactId>EjerciciosTema1-MIO</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

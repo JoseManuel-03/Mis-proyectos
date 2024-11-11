@@ -50,16 +50,16 @@ public class CountDown implements Runnable {
 
 		Thread hiloNoArrancado = new Thread(c1);
 
-		// Estado NEW: hilo creado pero no arrancado
+		// NEW: hilo creado pero no arrancado
 		System.out.println(hiloNoArrancado.getName() + " " + hiloNoArrancado.getState()); // STATE PARA VER EL ESTADO
 																							// DEL HILO
 		hiloNoArrancado.start();
 
-		// Estado RUNNABLE: hilo arrancado pero puede estar o no funcionando
+		// RUNNABLE: hilo arrancado pero puede estar o no funcionando
 		System.out.println(hiloNoArrancado.getName() + " " + hiloNoArrancado.getState());
 
 		while (hiloNoArrancado.isAlive()) {
-			// Estado TIMED_WAITING: en espera debido a Thread.sleep()
+			// TIMED_WAITING: en espera debido a Thread.sleep()
 			System.out.println(" TIMED_WAITING "+hiloNoArrancado.getName() + " " + hiloNoArrancado.getState());
 			try {
 				Thread.sleep(milis);
@@ -67,7 +67,7 @@ public class CountDown implements Runnable {
 				e.printStackTrace();
 			}
 		}
-		// Estado TERMINATED: terminado
+		// TERMINATED: terminado
         System.out.printf(hiloNoArrancado.getName() + " " + hiloNoArrancado.getState());
 	}
 
