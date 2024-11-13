@@ -1,0 +1,230 @@
+2024-11-12 18:56:57 INFO  [main] c.d.a.e.x.e.Ejercicio05ServiceImpl -
+				Conectando con el servicio
+2024-11-12 18:57:49 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 18:57:49 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Conectando con el servicio
+2024-11-12 18:57:49 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Creando el documento xml
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo libro
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo titulo
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autores
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo ediciones
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 18:57:50 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 18:57:50 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo libro
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo titulo
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autores
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo ediciones
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 18:57:50 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo libro
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo titulo
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autores
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo ediciones
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 18:57:50 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 18:57:50 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 19:03:19 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:03:19 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:03:19 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Creando el documento xml
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo libro
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo titulo
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autores
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo ediciones
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 19:03:19 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo libro
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo titulo
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autores
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo ediciones
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 19:03:19 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 19:03:19 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo libro
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo titulo
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autores
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo autor
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo ediciones
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 19:03:19 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo edicion
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo año
+2024-11-12 19:03:19 DEBUG [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Se añade hijo editorial
+2024-11-12 19:03:19 INFO  [main] c.d.a.e.x.e.Ejercicio04ServiceImpl -
+				Fichero creado
+2024-11-12 19:04:40 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:04:40 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:06:20 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:06:20 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:15:43 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:15:43 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:16:42 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:16:42 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:17:23 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:17:23 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:18:50 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:18:50 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:21:43 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:21:43 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:23:42 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:23:42 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:25:21 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:25:21 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:27:01 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:27:01 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:28:33 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:28:33 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:28:42 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:28:42 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:29:12 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:29:12 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:41:34 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:41:34 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:44:11 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:44:11 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:45:10 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:45:10 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:46:07 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:46:07 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:46:44 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:46:44 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio
+2024-11-12 19:46:57 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Creando una lista aleatoriamente
+2024-11-12 19:46:57 INFO  [main] c.d.a.e.x.e.Ejercicio10ServiceImpl -
+				Conectando con el servicio

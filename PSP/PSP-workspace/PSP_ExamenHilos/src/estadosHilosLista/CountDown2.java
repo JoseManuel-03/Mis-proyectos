@@ -19,13 +19,12 @@ public class CountDown2 implements Runnable {
 	@Override
 	public void run() {
 		for (int i = start; i >= 0; i--) {
-			System.out.println(name + i);
-		}
-
-		try {
-			Thread.sleep(milis);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+			System.out.printf(name, i);
+			try {
+				Thread.sleep(milis);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 
 	}
@@ -37,17 +36,15 @@ public class CountDown2 implements Runnable {
 
 		Thread hilo = new Thread(c1);
 
-		
 		estados = hilo.getState();
 		listaEstados.add(estados);
 		System.out.println(estados);
-		
+
 		hilo.start();
 		estados = hilo.getState();
 		listaEstados.add(estados);
 		System.out.println(estados);
-		
-		
+
 		while (hilo.isAlive()) {
 			estados = hilo.getState();
 			listaEstados.add(estados);
@@ -58,19 +55,18 @@ public class CountDown2 implements Runnable {
 				e.printStackTrace();
 			}
 		}
-		
+
 		listaEstados.add(estados);
-		
-		
+
 		System.out.println("Estados de los hilos");
-		
+
 		for (State state : listaEstados) {
-			
+
 			System.out.println(state);
-			
+
 		}
 		System.out.println(listaEstados.size());
-		
+
 	}
 
 }

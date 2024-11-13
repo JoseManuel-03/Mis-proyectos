@@ -1,26 +1,14 @@
-package ceu.dam.ad.ejerciciosTema3.xml.ejercicio10.modelo;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+package ceu.dam.ad.ejerciciosTema3.xml.ejercicio08.modelo;
 
 import java.util.ArrayList;
-
 import java.util.List;
 import java.util.Random;
 
-
 public class Libro {
-	@JacksonXmlProperty(isAttribute = true)
 	private Integer isbn;
 	private String titulo;
-	@JsonProperty(value = "autor")
-	@JacksonXmlElementWrapper(localName = "autores")
 	private List<String> autores;
-	@JsonProperty(value = "edicion")
-	@JacksonXmlElementWrapper(localName = "ediciones")
 	private List<Edicion> ediciones;
-	
-	
 	
 	public Libro() {
 		

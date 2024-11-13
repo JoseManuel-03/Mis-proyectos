@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libros titulo="krbrj tbpffb fcb">
+    <libro autores="[limjzb hxgr]" isbn="692759215">
+        <titulo />
+        <autores>
+            <autor>limjzb hxgr</autor>
+        </autores>
+        <ediciones>
+            <edicion>
+                <año año="1963" />
+                <editorial editorial="jncf rsed" />
+            </edicion>
+            <edicion>
+                <año año="1997" />
+                <editorial editorial="novozt mndrvsp" />
+            </edicion>
+        </ediciones>
+    </libro>
+    <libro autores="[zvzjnfax fzaxz, abor xbn]" isbn="556113761">
+        <titulo />
+        <autores>
+            <autor>zvzjnfax fzaxz</autor>
+            <autor>abor xbn</autor>
+        </autores>
+        <ediciones>
+            <edicion>
+                <año año="1980" />
+                <editorial editorial="rlgfdumj ofrhagv" />
+            </edicion>
+        </ediciones>
+    </libro>
+    <libro autores="[kpuw zwebw, nmccvv ylnpp]" isbn="871687514">
+        <titulo />
+        <autores>
+            <autor>kpuw zwebw</autor>
+            <autor>nmccvv ylnpp</autor>
+        </autores>
+        <ediciones>
+            <edicion>
+                <año año="1987" />
+                <editorial editorial="shbab eiwetxzri" />
+            </edicion>
+        </ediciones>
+    </libro>
+</libros>

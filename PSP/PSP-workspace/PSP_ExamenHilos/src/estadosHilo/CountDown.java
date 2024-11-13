@@ -60,7 +60,7 @@ public class CountDown implements Runnable {
 
 		while (hiloNoArrancado.isAlive()) {
 			// TIMED_WAITING: en espera debido a Thread.sleep()
-			System.out.println(" TIMED_WAITING "+hiloNoArrancado.getName() + " " + hiloNoArrancado.getState());
+			System.out.println(" TIMED_WAITING " + hiloNoArrancado.getName() + " " + hiloNoArrancado.getState());
 			try {
 				Thread.sleep(milis);
 			} catch (InterruptedException e) {
@@ -68,7 +68,7 @@ public class CountDown implements Runnable {
 			}
 		}
 		// TERMINATED: terminado
-        System.out.printf(hiloNoArrancado.getName() + " " + hiloNoArrancado.getState());
+		System.out.printf(hiloNoArrancado.getName() + " " + hiloNoArrancado.getState());
 	}
 
 }
