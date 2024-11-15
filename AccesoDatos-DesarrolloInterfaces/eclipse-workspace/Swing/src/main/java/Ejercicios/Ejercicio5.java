@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
-import net.miginfocom.swing.MigLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -45,13 +44,11 @@ public class Ejercicio5 {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
 
 		JLabel lblLabel = new JLabel("");
 		lblLabel.setBounds(65, 168, 319, 56);
 		frame.getContentPane().add(lblLabel);
-		
-		
+
 		JButton btnSumar = new JButton("Sumar");
 		btnSumar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -59,26 +56,25 @@ public class Ejercicio5 {
 		});
 		btnSumar.setBounds(7, 7, 434, 67);
 		frame.getContentPane().add(btnSumar);
-		
+
 		btnSumar.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String textoBoton = lblLabel.getText();
-				if(textoBoton.isEmpty()) {
+				if (textoBoton.isEmpty()) {
 					lblLabel.setText(textoBoton = "1");
-				}else {
+				} else {
 					String textoLabel = lblLabel.getText();
 					Integer numero = Integer.parseInt(textoLabel);
 					Integer suma = numero + 1;
 					textoLabel = String.valueOf(suma);
 					lblLabel.setText(textoLabel);
 				}
-				
+
 			}
 		});
-		
-		
+
 	}
 
 }

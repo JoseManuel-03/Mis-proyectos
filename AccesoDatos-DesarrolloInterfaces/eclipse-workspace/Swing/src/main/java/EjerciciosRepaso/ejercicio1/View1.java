@@ -15,6 +15,9 @@ import javax.swing.JCheckBox;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
 public class View1 extends JPanel {
 
 	private static final long serialVersionUID = 1L;
@@ -48,6 +51,11 @@ public class View1 extends JPanel {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
+
+				if (KeyEvent.VK_UP != e.getKeyCode() && KeyEvent.VK_DOWN != e.getKeyCode()) {
+					return;
+				}
+
 				contenido = textField.getText();
 
 				Integer numeroFinal = 0;
@@ -67,10 +75,7 @@ public class View1 extends JPanel {
 							|| KeyEvent.VK_UP == e.getKeyCode() && contenido.isEmpty()) {
 						numeroFinal = 1;
 
-					} else {
-						e.consume();
 					}
-
 					textField.setText(String.valueOf(numeroFinal));
 
 				} catch (NumberFormatException er) {
@@ -91,16 +96,30 @@ public class View1 extends JPanel {
 			@Override
 			public void mousePressed(MouseEvent e) {
 
-				chckbxNewCheckBox.setDisabledSelectedIcon(null);
-				textField.setText("");
-				textField.setEnabled(false);
-
-			//	textField.setEnabled(true);
-
+				if (chckbxNewCheckBox.isSelected()) {
+					textField.setEnabled(false);
+				} else {
+					textField.setEnabled(true);
+				}
 			}
 		});
 		chckbxNewCheckBox.setSelected(true);
 		chckbxNewCheckBox.setBounds(127, 218, 182, 23);
 		add(chckbxNewCheckBox);
+		
+		ImageIcon icon = new ImageIcon("C:/Users/jordonez5404/Downloads/papelera-de-reciclaje (1).png");
+
+		JButton btnClean = new JButton("Limpiar campos",icon);
+		btnClean.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				textField.setText("");
+			}
+		});
+		btnClean.setForeground(new Color(255, 0, 128));
+		btnClean.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+
+		btnClean.setBounds(294, 143, 146, 35);
+		add(btnClean);
 	}
 }

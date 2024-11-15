@@ -85,7 +85,7 @@ public class UserDao {
 
 	public void deleteUser(Connection conn, Long id) throws SQLException {
 		String sql = "delete from usuarios where id = ?";
-		try(PreparedStatement stmt = conn.prepareStatement(sql)){
+		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			stmt.setLong(1, id);
 			stmt.executeUpdate();
 		}
