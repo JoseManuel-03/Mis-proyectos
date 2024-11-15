@@ -1,10 +1,8 @@
-package ejercicios.ejercicio05.model;
+package PruebaExamen.modelo;
 
 import java.time.LocalDate;
 
-import lombok.Data;
 
-@Data
 public class User {
 
 	private Long id;

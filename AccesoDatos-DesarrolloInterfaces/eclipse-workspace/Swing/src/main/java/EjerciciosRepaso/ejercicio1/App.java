@@ -2,7 +2,6 @@ package EjerciciosRepaso.ejercicio1;
 
 import java.awt.EventQueue;
 
-
 import javax.swing.JFrame;
 
 public class App {
@@ -42,9 +41,9 @@ public class App {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		view1 = new View1();
 		mostrarPantalla();
-		
+
 	}
-	
+
 	public void mostrarPantalla() {
 		frame.setContentPane(view1);
 		frame.revalidate();
