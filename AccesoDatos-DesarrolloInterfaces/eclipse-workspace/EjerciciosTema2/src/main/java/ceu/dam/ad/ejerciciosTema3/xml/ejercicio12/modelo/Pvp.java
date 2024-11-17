@@ -2,10 +2,15 @@ package ceu.dam.ad.ejerciciosTema3.xml.ejercicio12.modelo;
 
 import java.math.BigDecimal;
 
-public class Pvp {
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
+public class Pvp {
+	@JacksonXmlProperty(localName = "precio")
 	private BigDecimal precio;
+	@JsonIgnore
 	private BigDecimal iva;
+	
 	public BigDecimal getPrecio() {
 		return precio;
 	}

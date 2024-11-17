@@ -1,14 +1,23 @@
 package ceu.dam.ad.ejerciciosTema3.xml.ejercicio12.modelo;
 
 import java.math.BigDecimal;
+
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement(localName = "catálogo")
 public class Catalogo {
-	
+	@JacksonXmlProperty(isAttribute = true)
 	private Integer tamaño;
+	@JsonProperty(value = "articulo")
+	@JacksonXmlElementWrapper(localName = "articulos")
 	private List<Articulo> articulos;
 
 	public List<Articulo> getArticulos() {

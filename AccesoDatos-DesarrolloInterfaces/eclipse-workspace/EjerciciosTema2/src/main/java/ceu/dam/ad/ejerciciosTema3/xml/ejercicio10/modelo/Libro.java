@@ -10,14 +10,14 @@ import java.util.Random;
 
 
 public class Libro {
-	@JacksonXmlProperty(isAttribute = true)
+	@JacksonXmlProperty(isAttribute = true) // atributo con el TAG <Libro isbn="8574">
 	private Integer isbn;
 	private String titulo;
-	@JsonProperty(value = "autor")
-	@JacksonXmlElementWrapper(localName = "autores")
+	@JsonProperty(value = "autor")                    //autores{											
+	@JacksonXmlElementWrapper(localName = "autores")  //  autor }
 	private List<String> autores;
-	@JsonProperty(value = "edicion")
-	@JacksonXmlElementWrapper(localName = "ediciones")
+	@JsonProperty(value = "edicion")                   //ediciones{
+	@JacksonXmlElementWrapper(localName = "ediciones") //   edicion  }
 	private List<Edicion> ediciones;
 	
 	

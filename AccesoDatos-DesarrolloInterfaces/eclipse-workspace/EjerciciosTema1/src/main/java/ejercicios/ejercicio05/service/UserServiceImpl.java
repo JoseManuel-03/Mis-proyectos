@@ -15,13 +15,10 @@ import ejercicios.ejercicio05.model.User;
 public class UserServiceImpl extends Service implements UserService {
 
 	private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
-
 	private UserDao dao;
-
 	public UserServiceImpl() {
 		dao = new UserDao();
 	}
-
 	@Override
 	public User createUser(User user) throws DuplicateUserException, UserException {
 		log.debug("Creando nuevo usuario: " + user);
@@ -41,10 +38,8 @@ public class UserServiceImpl extends Service implements UserService {
 			String passwordCifrada = DigestUtils.sha256Hex(user.getPassword());
 			user.setPassword(passwordCifrada);
 			user.setCreatedDate(LocalDate.now());
-
 			// 3. Insertar usuario
 			Long id = dao.insert(conn, user);
-
 			// 4. Recoger id creado y devolver user completo
 			user.setId(id);
 			log.debug("Usuario creado con éxito con id " + id);
@@ -54,7 +49,7 @@ public class UserServiceImpl extends Service implements UserService {
 			throw new UserException("Error registrando usuario");
 		}
 	}
-
+	
 	@Override
 	public void changePassword(Long idUser, String oldPassword, String newPassword)
 			throws UserNotFoundException, UserUnauthorizedException, UserException {

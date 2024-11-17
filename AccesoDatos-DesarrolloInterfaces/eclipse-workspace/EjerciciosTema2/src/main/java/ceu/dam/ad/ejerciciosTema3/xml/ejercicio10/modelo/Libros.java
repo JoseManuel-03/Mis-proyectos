@@ -6,9 +6,9 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-@JacksonXmlRootElement(localName = "libros")
+@JacksonXmlRootElement(localName = "libros") //cambia nombre Tag padre
 public class Libros {
-	@JacksonXmlElementWrapper(useWrapping = false)
+	@JacksonXmlElementWrapper(useWrapping = false)//quita el wrapper
 	@JsonProperty(value = "libro")
 	private List<Libro> libros;
 

@@ -2,9 +2,14 @@ package ceu.dam.ad.ejerciciosTema3.xml.ejercicio12.modelo;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+
 public class Modelo {
 	private String talla;
 	private String color;
+	@JsonProperty(value = "codigo")
+	@JacksonXmlElementWrapper(localName = "codigosBarra")
 	private List<String> codigosBarra;
 	
 	public String getTalla() {
