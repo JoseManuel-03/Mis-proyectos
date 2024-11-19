@@ -109,9 +109,8 @@ public class Ejercicio12ImplDom implements Ejercicio12Service {
 	@Override
 	public Catalogo importXML(String pathFile) throws CatalogoXMLException {
 		Catalogo catalogo = new Catalogo();
-		Articulo articulo = new Articulo();
-		Modelo modelo = new Modelo();
-		Pvp pvp = new Pvp();
+		List<Modelo> modelos = new ArrayList<Modelo>();
+		List<Articulo> articulos = new ArrayList<Articulo>();
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder;
@@ -122,17 +121,15 @@ public class Ejercicio12ImplDom implements Ejercicio12Service {
 			Document xml = builder.parse(fichero);
 
 			Element catalogoTag = xml.getDocumentElement();
-			List<Catalogo> listaCatalogo = new ArrayList<Catalogo>();
 
 			Integer tamaño = Integer.parseInt(catalogoTag.getAttribute("tamaño"));
 			catalogo.setTamaño(tamaño);
 
-			listaCatalogo.add(catalogo);
 			Element articulosTag = (Element) catalogoTag.getElementsByTagName("articulos").item(0);
 
 			NodeList articuloList = articulosTag.getElementsByTagName("articulo");
 			for (int i = 0; i < articuloList.getLength(); i++) {
-				List<Articulo> articulos = new ArrayList<Articulo>();
+				Articulo articulo = new Articulo();
 				articulos.add(articulo);
 				Element articuloTag = (Element) articuloList.item(i);
 
@@ -143,8 +140,8 @@ public class Ejercicio12ImplDom implements Ejercicio12Service {
 				articulo.setSku(identificadorTag.getTextContent());
 
 				Element precioTag = (Element) articuloTag.getElementsByTagName("precio").item(0);
-				
-				articulo.getPvp().setPrecio(new BigDecimal(precioTag.getTextContent()));                     /////ERROR AQUI
+				articulo.setPvp(new Pvp());
+				articulo.getPvp().setPrecio(new BigDecimal(precioTag.getTextContent()));                  
 
 				Element modelosDisponiblesTag = (Element) articuloTag.getElementsByTagName("modelosDisponibles")
 						.item(0);
@@ -152,7 +149,7 @@ public class Ejercicio12ImplDom implements Ejercicio12Service {
 				NodeList modelosList = modelosDisponiblesTag.getElementsByTagName("modelo");
 
 				for (int j = 0; j < modelosList.getLength(); j++) {
-					List<Modelo> modelos = new ArrayList<Modelo>();
+					Modelo modelo = new Modelo();
 					modelos.add(modelo);
 
 					Element modeloTag = (Element) modelosList.item(j);

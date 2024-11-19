@@ -4,9 +4,10 @@ import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 
 public class Pvp {
-	@JacksonXmlProperty(localName = "precio")
+	@JacksonXmlText
 	private BigDecimal precio;
 	@JsonIgnore
 	private BigDecimal iva;

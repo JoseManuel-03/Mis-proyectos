@@ -18,10 +18,10 @@ public class App {
 
 		try {
 			//services.exportXML(catalogo,"C:/Users/jmcor/OneDrive/Escritorio/Mis-proyectos/AccesoDatos-DesarrolloInterfaces/Ejercicio12DOM.xml");
-			servicesDom.importXML("C:/Users/jmcor/Downloads/catalogo.xml");
+			catalogo = servicesDom.importXML("C:/Users/jordonez5404/Desktop/mis proyectos new/Mis-proyectos/AccesoDatos-DesarrolloInterfaces/Ejercicio12DOM.xml");
 			//servicesSax.importXML("C:/Users/jmcor/Downloads/catalogo.xml");
 			//servicesJack.importXML("C:/Users/jmcor/Downloads/catalogo.xml");
-			servicesJack.exportXML(catalogo, "C:/Users/jmcor/OneDrive/Escritorio/Mis-proyectos/AccesoDatos-DesarrolloInterfaces/Ejercicio12Jackson.xml");
+			//servicesJack.exportXML(catalogo, "C:/Users/jmcor/OneDrive/Escritorio/Mis-proyectos/AccesoDatos-DesarrolloInterfaces/Ejercicio12Jackson.xml");
 			System.out.println(catalogo);
 
 		} catch (CatalogoXMLException e) {
