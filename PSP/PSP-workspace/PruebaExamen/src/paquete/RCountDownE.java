@@ -1,10 +1,14 @@
 package paquete;
 
-public class RCountDownE {
+public class RCountDownE implements Runnable {
+	private CountDownE countDown;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public RCountDownE(int start) {
+		this.countDown = new CountDownE(start);
 	}
 
+	@Override
+	public void run() {
+		countDown.contar();
+	}
 }

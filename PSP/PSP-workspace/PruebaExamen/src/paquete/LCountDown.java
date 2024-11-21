@@ -1,10 +1,15 @@
 package paquete;
 
 public class LCountDown {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public void lanzarCuentaAtras(int start) {
+		Runnable cuentaAtrasRunnable = new Runnable() {
+			@Override
+			public void run() {
+				CountDownE countDown = new CountDownE(start);
+				countDown.contar();
+			}
+		};
+		Thread hilo = new Thread(cuentaAtrasRunnable);
+		hilo.start();
 	}
-
 }
