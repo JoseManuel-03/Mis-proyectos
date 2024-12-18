@@ -147,19 +147,24 @@ public class App {
 	public void openCreateForm() {
 		changeView(registroView);
 	}
+
 	public void openProfile() {
 		changeView(profileView);
 		profileView.updateUserData(userSession);
 	}
+
 	public void openChangePassword() {
 		changeView(changePassView);
 	}
+
 	private void changeView(View panel) {
 		frame.setContentPane(panel);
 		frame.revalidate();
 		panel.initializeForm();
 	}
+
 	private void showError(String msg) {
+
 		JOptionPane.showMessageDialog(frame, msg, "Error", JOptionPane.ERROR_MESSAGE);
 	}
 

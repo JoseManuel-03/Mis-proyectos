@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 
 public class Pantalla1 extends JPanel {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -7819758235854662421L;
 	private JTextField txtPantalla1;
 	private App app;
 	private JTextField textField;

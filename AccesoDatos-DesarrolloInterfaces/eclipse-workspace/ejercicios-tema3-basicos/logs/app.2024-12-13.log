@@ -1,0 +1,324 @@
+2024-12-13 15:36:47 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 29012 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 15:36:47 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 15:36:47 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 6872 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 15:36:47 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 37164 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 15:36:47 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 15:36:47 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 15:36:47 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 15:36:47 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 15:36:47 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 15:36:47 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-13 15:36:47 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-13 15:36:47 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-13 15:36:47 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2024-12-13 15:36:47 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2024-12-13 15:36:47 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@216e9ca3
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@608fe01f
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5981f4a6
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-13 15:36:48 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-13 15:36:48 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-13 15:36:48 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-13 15:36:48 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-13 15:36:48 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-13 15:36:48 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-13 15:36:48 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-13 15:36:48 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-13 15:36:48 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-13 15:36:48 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-13 15:36:48 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-13 15:36:48 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-13 15:36:48 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-13 15:36:48 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-13 15:36:48 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-13 15:36:48 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-13 15:36:49 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-13 15:36:49 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:36:49 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-13 15:36:49 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-13 15:36:49 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:36:49 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:36:49 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 2.857 seconds (process running for 3.652)
+2024-12-13 15:36:49 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 2.857 seconds (process running for 3.637)
+2024-12-13 15:36:49 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 2.857 seconds (process running for 3.62)
+2024-12-13 15:36:49 INFO  [main] c.d.a.t.e.e.s.PeliculasService - Consultado peliculas menores de la longitud dada
+2024-12-13 15:36:49 INFO  [main] c.d.a.t.e.e.s.PeliculasService - Consultado peliculas menores de la longitud dada
+2024-12-13 15:36:49 INFO  [main] c.d.a.t.e.e.s.PeliculasService - Consultado peliculas menores de la longitud dada
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-13 15:36:49 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-13 15:54:54 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 34328 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 15:54:54 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 15:54:54 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 15:54:55 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-13 15:54:55 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2024-12-13 15:54:55 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-13 15:54:55 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@26c89563
+2024-12-13 15:54:55 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-13 15:54:55 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-13 15:54:55 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-13 15:54:55 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-13 15:54:55 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-13 15:54:55 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-13 15:54:56 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-13 15:54:56 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:54:56 INFO  [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void ceu.dam.ad.tema3.ejercicios.ejercicio02.test.TestEj2.test()
+2024-12-13 15:54:56 WARN  [main] o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testEj2': Injection of autowired dependencies failed
+2024-12-13 15:54:56 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:54:56 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-13 15:54:56 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-13 15:54:56 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-13 15:54:56 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testEj2': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1435)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at ceu.dam.ad.tema3.ejercicios.App.main(App.java:15)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "conn" is null
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.repository.ClientesDao.consultarClientes(ClientesDao.java:16)
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.service.ClienteService.consultarMapaClientes(ClienteService.java:28)
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.test.TestEj2.test(TestEj2.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 18 common frames omitted
+2024-12-13 15:55:10 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 40196 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 15:55:10 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 15:55:10 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 15:55:10 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-13 15:55:11 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2024-12-13 15:55:11 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-13 15:55:11 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@71926a36
+2024-12-13 15:55:11 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-13 15:55:11 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-13 15:55:11 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-13 15:55:11 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-13 15:55:11 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-13 15:55:11 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.5.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-13 15:55:11 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-13 15:55:11 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:55:12 INFO  [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void ceu.dam.ad.tema3.ejercicios.ejercicio02.test.TestEj2.test()
+2024-12-13 15:55:12 WARN  [main] o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testEj2': Injection of autowired dependencies failed
+2024-12-13 15:55:12 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-13 15:55:12 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-13 15:55:12 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-13 15:55:12 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-13 15:55:12 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testEj2': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1435)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at ceu.dam.ad.tema3.ejercicios.App.main(App.java:15)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "conn" is null
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.repository.ClientesDao.consultarClientes(ClientesDao.java:16)
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.service.ClienteService.consultarMapaClientes(ClienteService.java:28)
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.test.TestEj2.test(TestEj2.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 18 common frames omitted
+2024-12-13 15:56:11 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 17504 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 15:56:11 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 15:56:11 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 15:56:12 WARN  [main] o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testEj2': Injection of autowired dependencies failed
+2024-12-13 15:56:12 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testEj2': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1435)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at ceu.dam.ad.tema3.ejercicios.App.main(App.java:15)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "conn" is null
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.repository.ClientesDao.consultarClientes(ClientesDao.java:16)
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.service.ClienteService.consultarMapaClientes(ClienteService.java:28)
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.test.TestEj2.test(TestEj2.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 18 common frames omitted
+2024-12-13 15:56:55 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 46560 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 15:56:55 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 15:56:55 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 15:56:56 WARN  [main] o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testEj2': Injection of autowired dependencies failed
+2024-12-13 15:56:56 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testEj2': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1435)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at ceu.dam.ad.tema3.ejercicios.App.main(App.java:15)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "conn" is null
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.repository.ClientesDao.consultarClientes(ClientesDao.java:16)
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.service.ClienteService.consultarMapaClientes(ClienteService.java:28)
+	at ceu.dam.ad.tema3.ejercicios.ejercicio02.test.TestEj2.test(TestEj2.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 18 common frames omitted
+2024-12-13 15:58:01 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 47728 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 15:58:01 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 15:58:01 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 15:58:03 WARN  [main] o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testEj2': Unsatisfied dependency expressed through field 'clienteService': No qualifying bean of type 'ceu.dam.ad.tema3.ejercicios.ejercicio02.service.ClienteService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-12-13 15:58:03 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field clienteService in ceu.dam.ad.tema3.ejercicios.ejercicio02.test.TestEj2 required a bean of type 'ceu.dam.ad.tema3.ejercicios.ejercicio02.service.ClienteService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'ceu.dam.ad.tema3.ejercicios.ejercicio02.service.ClienteService' in your configuration.
+
+2024-12-13 16:09:18 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 2580 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 16:09:18 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 16:09:18 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 16:09:20 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 1.798 seconds (process running for 2.392)
+2024-12-13 16:09:48 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 57000 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 16:09:48 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 16:09:48 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 16:09:49 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 1.653 seconds (process running for 2.133)
+2024-12-13 16:09:50 INFO  [main] c.d.a.t.e.e.service.ClienteService - Consultado clientes
+2024-12-13 16:36:54 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 21788 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 16:36:54 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 16:36:54 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 16:36:56 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 1.673 seconds (process running for 2.163)
+2024-12-13 16:43:08 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 44100 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 16:43:08 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 16:43:08 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 16:43:09 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 1.673 seconds (process running for 2.172)
+2024-12-13 16:49:04 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 31608 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 16:49:04 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 16:49:04 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 16:49:05 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 1.716 seconds (process running for 2.219)
+2024-12-13 16:50:34 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 19888 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 16:50:34 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 16:50:34 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 16:50:36 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 1.7 seconds (process running for 2.19)
+2024-12-13 16:56:57 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Starting App using Java 23 with PID 38568 (C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos\target\classes started by jordonez5404 in C:\Users\jordonez5404\Desktop\mis proyectos new\Mis-proyectos\AccesoDatos-DesarrolloInterfaces\eclipse-workspace\ejercicios-tema3-basicos)
+2024-12-13 16:56:57 DEBUG [main] ceu.dam.ad.tema3.ejercicios.App - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-13 16:56:57 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - No active profile set, falling back to 1 default profile: "default"
+2024-12-13 16:56:58 INFO  [main] ceu.dam.ad.tema3.ejercicios.App - Started App in 1.673 seconds (process running for 2.17)

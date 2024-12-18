@@ -1,0 +1,39 @@
+#fondo {
+  -fx-background-image: url('https://img.freepik.com/fotos-premium/guitarra-clasica-espanola-sobre-guitarra-fondo-madera-cuerdas-nailon_613571-406.jpg'); /* Ruta de la imagen */
+  -fx-background-size: cover; /* La imagen cubre todo el fondo */
+  -fx-background-repeat: no-repeat; /* No repite la imagen */
+  -fx-background-position: center; /* Centra la imagen */
+}
+
+/* Estilo base para los botones */
+.button {
+    -fx-background-color: #4b2e2a; /* Marrón oscuro, similar a la madera */
+	-fx-text-fill: #fefefe
+    
+  }
+  
+  /* Efecto al pasar el cursor */
+button:hover {
+	-fx-background-color: #8c4a0e; /* Marrón oscuro al pasar el cursor */
+  }
+.label{
+	-fx-text-fill: #fefefe; /* Blanco cálido */
+	-fx-text-align: center;
+	
+}
+
+.text-field{
+	-fx-background-color: #4b2e2a; /* Marrón oscuro, similar a la madera */
+	-fx-text-fill: #fefefe; /* Blanco cálido */
+	-fx-text-align: center;
+}
+
+#labelRojo{
+	-fx-text-fill: red;
+}
+
+.password-field{
+	-fx-background-color: #4b2e2a; /* Marrón oscuro, similar a la madera */
+		-fx-text-fill: #fefefe; /* Blanco cálido */
+		-fx-text-align: center;
+}
