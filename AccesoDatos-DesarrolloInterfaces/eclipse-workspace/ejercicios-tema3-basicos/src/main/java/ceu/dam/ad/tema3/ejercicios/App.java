@@ -12,6 +12,7 @@ import ceu.dam.ad.tema3.ejercicios.ejercicio02.test.TestEj2;
 import ceu.dam.ad.tema3.ejercicios.ejercicio03.test.TestEj3;
 import ceu.dam.ad.tema3.ejercicios.ejercicio04.test.TestEj4;
 import ceu.dam.ad.tema3.ejercicios.ejercicio05.test.TestEj5;
+import ceu.dam.ad.tema3.ejercicios.ejercicio06.test.TestEj6;
 
 @SpringBootApplication
 public class App {
@@ -24,10 +25,12 @@ public class App {
 //		ej2.test();
 //		TestEj3 ej3 = context.getBean(TestEj3.class);
 //		ej3.test();
-		TestEj4 ej4 = context.getBean(TestEj4.class);
-		ej4.test();
+//		TestEj4 ej4 = context.getBean(TestEj4.class);
+//		ej4.test();
 //		TestEj5 ej5 = context.getBean(TestEj5.class);
 //		ej5.test();
+		TestEj6 ej6 = context.getBean(TestEj6.class);
+		ej6.test();
 	}
 
 }
