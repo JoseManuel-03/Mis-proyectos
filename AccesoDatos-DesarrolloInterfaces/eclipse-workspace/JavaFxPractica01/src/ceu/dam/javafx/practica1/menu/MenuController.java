@@ -24,6 +24,12 @@ public class MenuController extends AppController {
 	private MenuItem slider;
 
 	@FXML
+	private MenuItem HtmlEditor;
+
+	@FXML
+	private MenuItem webView;
+
+	@FXML
 	void abrirColorPicker(ActionEvent event) {
 		panel.setCenter(loadScene(FXML_COLORCHOOSER));
 	}
@@ -41,9 +47,20 @@ public class MenuController extends AppController {
 	}
 
 	@FXML
-	void abrirSlider(ActionEvent event) {
+	public void abrirSlider(ActionEvent event) {
 		panel.setCenter(loadScene(FXML_SLIDER));
 
+	}
+
+	@FXML
+	void abrirHmlEditor(ActionEvent event) {
+		panel.setCenter(loadScene(FXML_HTMLEDITOR));
+
+	}
+
+	@FXML
+	void abrirWebView(ActionEvent event) {
+		panel.setCenter(loadScene(FXML_WEBVIEW));
 	}
 
 	@FXML

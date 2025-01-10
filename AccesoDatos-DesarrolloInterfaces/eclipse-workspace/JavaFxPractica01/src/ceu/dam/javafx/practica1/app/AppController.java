@@ -2,6 +2,7 @@ package ceu.dam.javafx.practica1.app;
 
 import java.io.IOException;
 
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +19,8 @@ public class AppController {
 	public static final String FXML_COLORCHOOSER = "/app/login/colorChooser.fxml";
 	public static final String FXML_MENU = "/app/login/menu.fxml";
 	public static final String FXML_SLIDER = "/app/login/slider.fxml";
+	public static final String FXML_WEBVIEW = "/app/login/webview.fxml";
+	public static final String FXML_HTMLEDITOR = "/app/login/htmleditor.fxml";
 
 	public static Stage primaryStage;
 

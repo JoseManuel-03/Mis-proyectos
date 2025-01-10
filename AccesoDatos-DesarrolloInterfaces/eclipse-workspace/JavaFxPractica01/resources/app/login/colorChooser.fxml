@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="Componentes">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Combobox" />
-                  <MenuItem mnemonicParsing="false" text="DatePicket" />
-                  <MenuItem mnemonicParsing="false" text="ColorPicket" />
-                  <MenuItem mnemonicParsing="false" text="Slider" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Otros">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Cerrar sesión" />
-                  <MenuItem mnemonicParsing="false" text="Salir" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
-</BorderPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceu.dam.javafx.practica1.colorChooser.ColorChooserController">
+   <children>
+      <Button fx:id="boton" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#cambiarLabel" text="Button" />
+      <Label fx:id="nombreColor" layoutX="262.0" layoutY="247.0" prefHeight="53.0" prefWidth="87.0" text="Color">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="color" layoutX="197.0" layoutY="105.0" prefHeight="32.0" prefWidth="226.0" />
+   </children>
+</Pane>

@@ -22,9 +22,15 @@
 	</dependency>
 
 	<dependency>
-    	<groupId>org.openjfx</groupId>
-    	<artifactId>javafx-fxml</artifactId>
-    	<version>23.0.1</version>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-web</artifactId>
+    <version>21.0.1</version> <!-- Pon la misma versión de JavaFX que estés usando en las otras dependencias -->
 	</dependency>
-  </dependencies>
+ 
+	<dependency>
+		<groupId>CEU</groupId>
+		<artifactId>javaFX</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	</dependencies>
 </project>

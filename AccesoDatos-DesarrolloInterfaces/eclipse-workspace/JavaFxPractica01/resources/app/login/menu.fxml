@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -15,6 +16,8 @@
                   <MenuItem fx:id="datePicker" mnemonicParsing="false" onAction="#abrirDatePicker" text="DatePicker" />
                   <MenuItem fx:id="colorPicker" mnemonicParsing="false" onAction="#abrirColorPicker" text="ColorPicker" />
                   <MenuItem fx:id="slider" mnemonicParsing="false" onAction="#abrirSlider" text="Slider" />
+                  <MenuItem fx:id="webView" mnemonicParsing="false" onAction="#abrirWebView" text="WebView" />
+                  <MenuItem fx:id="HtmlEditor" mnemonicParsing="false" onAction="#abrirHmlEditor" text="HTMLEditor " />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Otros">
@@ -26,4 +29,7 @@
         </menus>
       </MenuBar>
    </top>
+   <center>
+      <Label prefHeight="35.0" prefWidth="208.0" text="ELIJA LA OPCIÓN QUE MÁS LE GUSTE" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
