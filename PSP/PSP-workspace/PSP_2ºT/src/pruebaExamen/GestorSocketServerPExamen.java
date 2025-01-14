@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class GestorSocketServerPExamen implements Runnable {
@@ -22,6 +23,42 @@ public class GestorSocketServerPExamen implements Runnable {
 	public GestorSocketServerPExamen(Socket socket) {
 		this.socket = socket;
 	}
+	
+	private String procesarMensaje(String mensaje) {
+        if (mensaje.startsWith("#Listado números#")) {
+            String[] partes = mensaje.split("#");
+            if (partes.length == 4) {
+                try {
+                    int inicio = Integer.parseInt(partes[2]);
+                    int fin = Integer.parseInt(partes[3]);
+                    if (inicio > fin) return "#Error#";
+                    String resultado = "";
+                    for (int i = inicio; i <= fin; i++) {
+                        resultado += i + "|"; // Usamos concatenación directa
+                    }
+                    return resultado.substring(0, resultado.length() - 1); // Quitamos el último "|"
+                } catch (NumberFormatException e) {
+                    return "#Error#";
+                }
+            }
+        } else if (mensaje.startsWith("#Numero aleatorio#")) {
+            String[] partes = mensaje.split("#");
+            if (partes.length == 4) {
+                try {
+                    int inicio = Integer.parseInt(partes[2]);
+                    int fin = Integer.parseInt(partes[3]);
+                    if (inicio > fin) return "#Error#";
+                    Random random = new Random();
+                    return String.valueOf(random.nextInt(fin - inicio + 1) + inicio);
+                } catch (NumberFormatException e) {
+                    return "#Error#";
+                }
+            }
+        } else if (mensaje.equals("#Fin#")) {
+            return "#Finalizado#";
+        }
+        return "#Error#";
+    }
 
 	@Override
 	public void run() {
@@ -31,34 +68,35 @@ public class GestorSocketServerPExamen implements Runnable {
 			pw = new PrintWriter(os, true);
 			isr = new InputStreamReader(is);
 			br = new BufferedReader(isr);
+
+		
+			String mensaje;
+			
+		while ((mensaje = br.readLine()) != null) {
+			System.out.println("Petición recibida: " + mensaje);
+			String respuesta = procesarMensaje(mensaje);
+			System.out.println("Respuesta enviada: " + respuesta);
+			pw.println(respuesta);
+
+			if (respuesta.equals("#Finalizado#")) {
+				break;
+			}
+		}
 		} catch (IOException e) {
 			System.out.println("(Gestor sockets) Error abriendo streams del socket");
 			return;
 		}
-		while (true) {
-			String datoLeido;
-			try {
-				datoLeido = br.readLine();
-				peticionesAlServidor.getAndIncrement();
-				if (datoLeido.equals(datoLeido)) {
 
-				}
-			} catch (IOException e) {
-				System.out.println("(Gestor sockets) Error leyendo el buffered reader");
-				break; // Salir del bucle en caso de error de E/S
-			}
-
-			try {
-				pw.close();
-				br.close();
-				isr.close();
-				is.close();
-				os.close();
-			} catch (IOException e) {
-				System.out.println("(Gestor sockets) Error cerrando streams del socket");
-			}
-
+		try {
+			pw.close();
+			br.close();
+			isr.close();
+			is.close();
+			os.close();
+		} catch (IOException e) {
+			System.out.println("(Gestor sockets) Error cerrando streams del socket");
 		}
+
 	}
 
 }

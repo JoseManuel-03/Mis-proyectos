@@ -30,8 +30,8 @@ public class PedidosService {
 
 	public Pedido consultarPedido(Long idPedido) throws PedidoException, PedidoNotFoundException {
 		log.debug("Consultando pedido con id " + idPedido);
+		Optional<Pedido> pedidoOpt = pedidoRepository.findByIdPedido(idPedido);
 		try {
-			Optional<Pedido> pedidoOpt = pedidoRepository.findByIdPedido(idPedido);
 			if (!pedidoOpt.isPresent()) {
 				log.warn("No se ha encontrado el pedido con id " + idPedido);
 				throw new PedidoNotFoundException("No existe pedido con id " + idPedido);

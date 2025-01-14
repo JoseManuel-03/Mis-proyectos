@@ -24,7 +24,7 @@ public class SocketServerPExamen {
 	public static void main(String[] args) throws IOException {
 		ServerSocket serverS = null;
 		try {
-			serverS = new ServerSocket(8081);
+			serverS = new ServerSocket(8082);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return;
@@ -36,6 +36,7 @@ public class SocketServerPExamen {
 				System.out.println("(Servidor)Socket aceptado.");
 				socketAceptados++;
 				new Thread(new GestorSocketServerPExamen(miSocket)).start();
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 				return;

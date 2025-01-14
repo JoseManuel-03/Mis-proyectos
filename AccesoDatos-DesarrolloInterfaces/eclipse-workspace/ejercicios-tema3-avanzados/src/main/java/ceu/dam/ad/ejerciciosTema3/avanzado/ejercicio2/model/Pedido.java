@@ -22,7 +22,6 @@ public class Pedido {
 	@GeneratedValue
 	@JdbcTypeCode(java.sql.Types.VARCHAR)
 	@Column(name = "uuid_pedido")
-
 	private UUID uidPedido;
 	private Cliente cliente;
 	private Date fecha;
