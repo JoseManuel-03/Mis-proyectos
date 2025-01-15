@@ -24,11 +24,11 @@ public class Serie {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String descripcion;
-	@Column(name = "fechaEstreno")
+	@Column(name = "fecha_estreno")
 	private Date estreno;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_trailer", nullable = true)
+	@JoinColumn(name = "id_trailer", nullable = true) //no hace falta el nullable, al ser true es lo mismo si no se pone nada
 	private Trailer trailer;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

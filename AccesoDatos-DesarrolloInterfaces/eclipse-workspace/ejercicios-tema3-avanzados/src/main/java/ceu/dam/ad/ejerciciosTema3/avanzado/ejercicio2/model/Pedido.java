@@ -8,12 +8,17 @@ import java.util.UUID;
 import org.hibernate.annotations.JdbcType;
 import org.hibernate.annotations.JdbcTypeCode;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Pedido {
@@ -23,9 +28,11 @@ public class Pedido {
 	@JdbcTypeCode(java.sql.Types.VARCHAR)
 	@Column(name = "uuid_pedido")
 	private UUID uidPedido;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="dni_cliente")
 	private Cliente cliente;
 	private Date fecha;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "uuid_pedido")
 	private List<PedidoLinea> lineas;
 

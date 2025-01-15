@@ -18,7 +18,6 @@ import java.util.Date;
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, UUID> {
 	
-	List<Pedido> findByUidPedido(UUID uidPedido);
 	
 	List<Pedido> findByCliente(Cliente cliente);
 	

@@ -2,21 +2,23 @@ package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio2.model;
 
 import java.util.Set;
 
-import org.hibernate.annotations.JdbcTypeCode;
-
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.OneToMany;
+
 @Entity
 public class Cliente {
 	@Id
-	@GeneratedValue
 	private String dni;
 	private String nombre;
 	private String apellidos;
-	@OneToOne
+	
+	@OneToMany(mappedBy="cliente", fetch = FetchType.LAZY)
 	@JoinColumn(name="dni_cliente")
 	private Set<Pedido> pedidos;
 	

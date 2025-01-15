@@ -19,7 +19,7 @@ public class SocketServerPExamen {
 	public static void main(String[] args) throws IOException {
 		ServerSocket serverS = null;
 		try {
-			serverS = new ServerSocket(8082);
+			serverS = new ServerSocket(8083);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return;
@@ -38,5 +38,7 @@ public class SocketServerPExamen {
 		}
 
 	}
+	
+	
 
 }

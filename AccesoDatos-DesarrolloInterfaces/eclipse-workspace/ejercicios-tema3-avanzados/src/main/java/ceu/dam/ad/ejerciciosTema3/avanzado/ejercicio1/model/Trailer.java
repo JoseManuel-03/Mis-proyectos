@@ -1,4 +1,4 @@
-package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio1.model;
+	package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio1.model;
 
 
 import jakarta.persistence.Entity;

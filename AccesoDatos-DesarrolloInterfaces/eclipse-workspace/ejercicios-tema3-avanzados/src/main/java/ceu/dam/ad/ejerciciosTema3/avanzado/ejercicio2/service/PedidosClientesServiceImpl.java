@@ -1,7 +1,8 @@
 package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio2.service;
 
-import java.lang.foreign.Linker.Option;
+
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -28,18 +29,18 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 	@Autowired
 	private ArticuloRepository articuloRepository;
 
+	/**
+	 * Debe crear en bbdd el cliente indicado. Si el cliente incorpora una lista de
+	 * pedidos, estos no deben de registrarse en la BBDD.
+	 */
 	@Override
 	public void crearCliente(Cliente cliente) throws PedidosClientesServiceException {
 		try {
-
-			if (cliente.getPedidos() != null) {
-				cliente.setPedidos(null);
-			}
-
+			
 			clienteRepository.save(cliente);
 
 		} catch (DataAccessException e) {
-			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
+			throw new PedidosClientesServiceException("Error al registrar los clientes", e);
 		}
 	}
 
@@ -47,7 +48,7 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 	public Pedido crearPedido(Pedido pedido) throws PedidosClientesServiceException {
 		try {
 
-			repository.save(pedido);
+			clienteRepository.save(pedido.getCliente());
 			Integer numLinea = 1;
 
 			for (PedidoLinea linea : pedido.getLineas()) {
@@ -56,6 +57,7 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 				numLinea++;
 				lineaRepository.save(linea);
 			}
+			repository.save(pedido);
 
 			return pedido;
 
@@ -63,8 +65,10 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
 		}
 	}
-
-
+	/**
+	 * Debe crear en bbdd el artículo indicado. Devolverá el articulo registrado
+	 * completo.
+	 */
 	@Override
 	public Articulo crearArticulo(Articulo articulo) throws PedidosClientesServiceException {
 		try {
@@ -73,12 +77,14 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 			return articulo;
 
 		} catch (DataAccessException e) {
-			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
+			throw new PedidosClientesServiceException("Error al registrar los articulos", e);
 		}
 	}
 
-
-
+	/**
+	 * Actualizará los datos del cliente indicado en BBDD. Sólo se actualizarán los
+	 * datos de esta entidad, no de sus pedidos.
+	 */
 	@Override
 	public void actualizarCliente(Cliente cliente) throws PedidosClientesServiceException {
 		try {
@@ -86,7 +92,7 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 			clienteRepository.save(cliente);
 
 		} catch (DataAccessException e) {
-			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
+			throw new PedidosClientesServiceException("Error al registrar los cliente", e);
 		}
 	}
 
@@ -106,38 +112,28 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 			}
 			Cliente cliente = clienteOpt.get();
 
-
-			for (Pedido pedidos : cliente.getPedidos()) {
-				pedidos.getLineas();
-			}
-
 			return cliente;
 
 		} catch (DataAccessException e) {
-			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
+			throw new PedidosClientesServiceException("Error al registrar los cliente", e);
 		}
 	}
-
-	/**
-	 * Consulta el articulo con el ID indicado en BBDD. Si no existe, lanza
-	 * NotFoundException Si existe, devolverá dicho artículo.
-	 */
 
 	@Override
 	public Articulo consultarArticulo(Long idArticulo) throws NotFoundException, PedidosClientesServiceException {
 		try {
-	
-		Optional<Articulo> articuloOpt = articuloRepository.findById(idArticulo);
-		
-		if (!articuloOpt.isPresent()) {
-			throw new NotFoundException("Error articulo no encontrado ");
-		}	
-		Articulo articulo = articuloOpt.get();
 
-		return articulo;
-		
+			Optional<Articulo> articuloOpt = articuloRepository.findById(idArticulo);
+
+			if (!articuloOpt.isPresent()) {
+				throw new NotFoundException("Error articulo no encontrado ");
+			}
+			Articulo articulo = articuloOpt.get();
+
+			return articulo;
+
 		} catch (DataAccessException e) {
-			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
+			throw new PedidosClientesServiceException("Error al registrar los articulos", e);
 		}
 	}
 
@@ -148,28 +144,26 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 	 */
 	@Override
 	public Pedido consultarPedido(String uuid) throws NotFoundException, PedidosClientesServiceException {
-		
+
 		try {
-			
-			Optional<Pedido> pedidoOpt = repository.findByUidPedido(uuid);
-			
+			UUID uuidNuevo = UUID.fromString(uuid);
+			Optional<Pedido> pedidoOpt = repository.findById(uuidNuevo);
+
 			if (!pedidoOpt.isPresent()) {
 				throw new NotFoundException("Error articulo no encontrado ");
-			}	
+			}
 			Pedido pedido = pedidoOpt.get();
-			
+
 			for (PedidoLinea lineas : pedido.getLineas()) {
 				lineas.getArticulo();
 			}
 
 			return pedido;
-			
-			} catch (DataAccessException e) {
-				throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
-			}
-		 
+
+		} catch (DataAccessException e) {
+			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
+		}
+
 	}
-	
-	
 
 }

@@ -22,86 +22,76 @@ public class GestorSocketServerPExamen implements Runnable {
 	public GestorSocketServerPExamen(Socket socket) {
 		this.socket = socket;
 	}
-	
-	private String procesarMensaje(String mensaje) {
-        if (mensaje.startsWith("#Listado números#")) {
-        	
-            String[] partes = mensaje.split("#");
-            
-            if (partes.length == 4) {
-                try {
-                    int inicio = Integer.parseInt(partes[2]);
-                    int fin = Integer.parseInt(partes[3]);
-                    if (inicio > fin) return "#Error#";
-                    String resultado = "";
-                    for (int i = inicio; i <= fin; i++) {
-                        resultado += i + "|"; // Usamos concatenación directa
-                    }
-                    return resultado.substring(0, resultado.length() - 1); // Quitamos el último "|"
-                } catch (NumberFormatException e) {
-                    return "#Error#";
-                }
-            }
-        } else if (mensaje.startsWith("#Numero aleatorio#")) {
-            String[] partes = mensaje.split("#");
-            if (partes.length == 4) {
-                try {
-                    int inicio = Integer.parseInt(partes[2]);
-                    int fin = Integer.parseInt(partes[3]);
-                    if (inicio > fin) return "#Error#";
-                    Random random = new Random();
-                    return String.valueOf(random.nextInt(fin - inicio + 1) + inicio);
-                } catch (NumberFormatException e) {
-                    return "#Error#";
-                }
-            }
-        } else if (mensaje.equals("#Fin#")) {
-            return "#Finalizado#";
-        }
-        return "#Error#";
-    }
 
 	@Override
 	public void run() {
-		try {
-			is = socket.getInputStream();
-			os = socket.getOutputStream();
-			pw = new PrintWriter(os, true);
-			isr = new InputStreamReader(is);
-			br = new BufferedReader(isr);
 
-		
+		try (BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
 			String mensaje;
-			
-		while ((mensaje = br.readLine()) != null) {
-			
-			System.out.println("Petición recibida: " + mensaje);
-			
-			String respuesta = procesarMensaje(mensaje);
-			
-			System.out.println("Respuesta enviada: " + respuesta);
-			
-			pw.println(respuesta);
+			while ((mensaje = in.readLine()) != null) {
 
-			if (respuesta.equals("#Finalizado#")) {
-				break;
+				System.out.println("Mensaje recibido: " + mensaje);
+				String respuesta = procesarMensaje(mensaje);
+				System.out.println("Respuesta enviada: " + respuesta);
+				out.println(respuesta);
+				if (respuesta.equals("#Finalizado#")) {
+					break;
+				}
 			}
-		}
 		} catch (IOException e) {
-			System.out.println("(Gestor sockets) Error abriendo streams del socket");
-			return;
+			e.printStackTrace();
+		} finally {
+			try {
+				socket.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			System.out.println("Conexión cerrada.");
 		}
+	}
 
-		try {
-			pw.close();
-			br.close();
-			isr.close();
-			is.close();
-			os.close();
-		} catch (IOException e) {
-			System.out.println("(Gestor sockets) Error cerrando streams del socket");
+	private String procesarMensaje(String mensaje) {
+
+		if (mensaje.startsWith("#Listado números#")) {
+
+			try {
+				String[] partes = mensaje.split("#");
+
+				int inicio = Integer.parseInt(partes[2]);
+				int fin = Integer.parseInt(partes[3]);
+
+				if (inicio <= fin) {
+					StringBuilder resultado = new StringBuilder();
+
+					for (int i = inicio; i <= fin; i++) {
+						resultado.append(i).append("|");
+					}
+					return resultado.substring(0, resultado.length() - 1);
+				}
+			} catch (Exception e) {
+				return "#Error#";
+			}
+		} else if (mensaje.startsWith("#Numero aleatorio#")) {
+
+			try {
+				String[] partes = mensaje.split("#");
+				int inicio = Integer.parseInt(partes[2]);
+				int fin = Integer.parseInt(partes[3]);
+
+				if (inicio <= fin) {
+					Random random = new Random();
+
+					return String.valueOf(random.nextInt(fin - inicio + 1) + inicio);
+				}
+			} catch (Exception e) {
+				return "#Error#";
+			}
+		} else if (mensaje.equals("#Fin#")) {
+
+			return "#Finalizado#";
 		}
-
+		return "#Error#";
 	}
 
 }
