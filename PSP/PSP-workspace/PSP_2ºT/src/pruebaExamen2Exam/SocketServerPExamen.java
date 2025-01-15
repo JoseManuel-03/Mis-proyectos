@@ -1,4 +1,4 @@
-package pruebaExamen;
+package pruebaExamen2Exam;
 
 import java.io.IOException;
 import java.io.InputStream;

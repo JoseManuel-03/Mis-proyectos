@@ -18,7 +18,6 @@ public class GestorSocketServerPExamen implements Runnable {
 	private PrintWriter pw;
 	private InputStreamReader isr;
 	private BufferedReader br;
-	private static AtomicLong peticionesAlServidor = new AtomicLong(0);
 
 	public GestorSocketServerPExamen(Socket socket) {
 		this.socket = socket;
@@ -26,7 +25,9 @@ public class GestorSocketServerPExamen implements Runnable {
 	
 	private String procesarMensaje(String mensaje) {
         if (mensaje.startsWith("#Listado números#")) {
+        	
             String[] partes = mensaje.split("#");
+            
             if (partes.length == 4) {
                 try {
                     int inicio = Integer.parseInt(partes[2]);
@@ -73,9 +74,13 @@ public class GestorSocketServerPExamen implements Runnable {
 			String mensaje;
 			
 		while ((mensaje = br.readLine()) != null) {
+			
 			System.out.println("Petición recibida: " + mensaje);
+			
 			String respuesta = procesarMensaje(mensaje);
+			
 			System.out.println("Respuesta enviada: " + respuesta);
+			
 			pw.println(respuesta);
 
 			if (respuesta.equals("#Finalizado#")) {
