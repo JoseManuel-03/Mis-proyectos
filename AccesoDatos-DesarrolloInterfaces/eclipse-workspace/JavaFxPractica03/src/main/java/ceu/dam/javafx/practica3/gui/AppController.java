@@ -13,6 +13,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class AppController {
+	
+	public static final String FXML_CONSULTA = "/consulta.fxml";
+	public static final String FXML_ALTA = "/alta.fxml";
+	public static final String FXML_ALTASEGUNDAA = "/altaSegunda.fxml";
 
 	private static Stage primaryStage;
 	

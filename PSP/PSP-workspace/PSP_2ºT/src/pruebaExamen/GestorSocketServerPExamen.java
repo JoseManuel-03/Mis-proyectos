@@ -22,6 +22,7 @@ public class GestorSocketServerPExamen implements Runnable {
 		this.socket = socket;
 	}
 
+
 	@Override
 	public void run() {
 
