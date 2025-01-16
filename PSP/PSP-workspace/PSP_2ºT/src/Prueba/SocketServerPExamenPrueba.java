@@ -1,15 +1,15 @@
-package pruebaExamen;
+package Prueba;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class SocketServerPExamen {
+public class SocketServerPExamenPrueba {
 
 	private ServerSocket serverSocket;
 	private int port;
 
-	public SocketServerPExamen(int port) throws IOException {
+	public SocketServerPExamenPrueba(int port) throws IOException {
 		this.port = port;
 		serverSocket = new ServerSocket(port);
 	}
@@ -27,7 +27,7 @@ public class SocketServerPExamen {
 			try {
 				miSocket = serverS.accept();
 				System.out.println("(Servidor)Socket aceptado.");
-				new Thread(new GestorSocketServerPExamen(miSocket)).start();
+				new Thread(new GestorSocketServerPExamenPrueba(miSocket)).start();
 
 			} catch (IOException e) {
 				e.printStackTrace();

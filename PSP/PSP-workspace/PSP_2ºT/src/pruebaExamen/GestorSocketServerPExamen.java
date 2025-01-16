@@ -8,7 +8,6 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class GestorSocketServerPExamen implements Runnable {
 

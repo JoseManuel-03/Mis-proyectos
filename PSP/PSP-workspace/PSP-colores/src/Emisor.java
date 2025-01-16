@@ -31,10 +31,16 @@ public class Emisor {
 		}
 		System.out.print(ANSI_RED+caracter+ANSI_RESET);
 	}
+	
+	
+	
 
 	public static void main(String[] args) {
 		Emisor emisor = new Emisor("", '*', 3);
 		emisor.emitir();
+		
+		
+		
 
 	}
 

@@ -1,13 +1,13 @@
-package pruebaExamen;
+package copiasMemoriaExamen;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.lang.reflect.Member;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class SocketClientPExamen {
+public class SocketClient4 {
 
 	public static void main(String[] args) {
 
@@ -16,26 +16,21 @@ public class SocketClientPExamen {
 				PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 				Scanner scanner = new Scanner(System.in)) {
 
-			System.out.println("Conectado al servidor. Escribe un mensaje:");
-			
+			System.out.println("(Client)Conectando al server, escriba un mensaje");
+
 			while (true) {
-				
-				System.out.print("Mensaje: ");
-				
+
+				System.out.println("Mensaje: ");
 				String mensaje = scanner.nextLine();
 				out.println(mensaje);
+
 				String respuesta = in.readLine();
-				
+
 				System.out.println("Mensaje recibido: " + respuesta);
-				
-				if (respuesta.equals("#Finalizado#")) {
-					System.out.println("Fin de la conexión.");
-					break;
-				} else if (respuesta.equals("#Error#")) {
-					System.out.println("Mensaje no adecuadamente formateado para su tratamiento.");
-				}
+
 			}
-		} catch (IOException e) {
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
