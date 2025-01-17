@@ -27,7 +27,7 @@ public class PedidoLinea {
 	private UUID uidLinea;
 	private Integer numLinea;
 	private Integer cantidad;
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn(name = "id_articulo")
 	private Articulo articulo;
 

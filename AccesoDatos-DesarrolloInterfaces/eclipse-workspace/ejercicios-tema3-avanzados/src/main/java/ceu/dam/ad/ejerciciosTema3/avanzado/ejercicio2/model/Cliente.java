@@ -18,10 +18,9 @@ public class Cliente {
 	private String nombre;
 	private String apellidos;
 	
-	@OneToMany(mappedBy="cliente", fetch = FetchType.LAZY)
-	@JoinColumn(name="dni_cliente")
+	@OneToMany(mappedBy="cliente", fetch = FetchType.EAGER)
 	private Set<Pedido> pedidos;
-	
+		
 	public String getDni() {
 		return dni;
 	}

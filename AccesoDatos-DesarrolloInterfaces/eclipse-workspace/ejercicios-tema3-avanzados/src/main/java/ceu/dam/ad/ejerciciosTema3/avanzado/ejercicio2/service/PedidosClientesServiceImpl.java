@@ -1,6 +1,5 @@
 package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio2.service;
 
-
 import java.util.Optional;
 import java.util.UUID;
 
@@ -36,7 +35,7 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 	@Override
 	public void crearCliente(Cliente cliente) throws PedidosClientesServiceException {
 		try {
-			
+
 			clienteRepository.save(cliente);
 
 		} catch (DataAccessException e) {
@@ -48,23 +47,29 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 	public Pedido crearPedido(Pedido pedido) throws PedidosClientesServiceException {
 		try {
 
-			clienteRepository.save(pedido.getCliente());
-			Integer numLinea = 1;
+			Optional<Cliente> clienteOpt = clienteRepository.findById(pedido.getCliente().getDni());
 
-			for (PedidoLinea linea : pedido.getLineas()) {
-				linea.setUidLinea(pedido.getUidPedido());
-				linea.setNumLinea(numLinea);
-				numLinea++;
-				lineaRepository.save(linea);
+			if (!clienteOpt.isPresent()) {
+				throw new PedidosClientesServiceException("Error cliente no encontrado ");
 			}
-			repository.save(pedido);
 
-			return pedido;
+			for (int i = 0; i < pedido.getLineas().size(); i++) {
+				PedidoLinea pedidoLinea = pedido.getLineas().get(i);
+				Long idArticulo = pedidoLinea.getArticulo().getId();
+				pedidoLinea.setNumLinea(i + 1);
+
+				if (!articuloRepository.findById(idArticulo).isPresent()) {
+					throw new PedidosClientesServiceException("Error cliente no encontrado ");
+
+				}
+			}
+			return repository.save(pedido);
 
 		} catch (DataAccessException e) {
 			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);
 		}
 	}
+
 	/**
 	 * Debe crear en bbdd el artículo indicado. Devolverá el articulo registrado
 	 * completo.
@@ -73,8 +78,7 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 	public Articulo crearArticulo(Articulo articulo) throws PedidosClientesServiceException {
 		try {
 
-			articuloRepository.save(articulo);
-			return articulo;
+			return articuloRepository.save(articulo);
 
 		} catch (DataAccessException e) {
 			throw new PedidosClientesServiceException("Error al registrar los articulos", e);
@@ -89,6 +93,9 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 	public void actualizarCliente(Cliente cliente) throws PedidosClientesServiceException {
 		try {
 
+			if (!clienteRepository.findById(cliente.getDni()).isPresent()) {
+				throw new PedidosClientesServiceException("Error cliente no encontrado ");
+			}
 			clienteRepository.save(cliente);
 
 		} catch (DataAccessException e) {
@@ -105,14 +112,12 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 	public Cliente consultarCliente(String dni) throws NotFoundException, PedidosClientesServiceException {
 		try {
 
-			Optional<Cliente> clienteOpt = clienteRepository.findById(dni);
+			Optional<Cliente> cliente = clienteRepository.findById(dni);
 
-			if (!clienteOpt.isPresent()) {
+			if (!cliente.isPresent()) {
 				throw new NotFoundException("Error cliente no encontrado ");
 			}
-			Cliente cliente = clienteOpt.get();
-
-			return cliente;
+			return cliente.get();
 
 		} catch (DataAccessException e) {
 			throw new PedidosClientesServiceException("Error al registrar los cliente", e);
@@ -147,18 +152,13 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 
 		try {
 			UUID uuidNuevo = UUID.fromString(uuid);
-			Optional<Pedido> pedidoOpt = repository.findById(uuidNuevo);
+			Optional<Pedido> pedido = repository.findById(uuidNuevo);
 
-			if (!pedidoOpt.isPresent()) {
+			if (!pedido.isPresent()) {
 				throw new NotFoundException("Error articulo no encontrado ");
 			}
-			Pedido pedido = pedidoOpt.get();
 
-			for (PedidoLinea lineas : pedido.getLineas()) {
-				lineas.getArticulo();
-			}
-
-			return pedido;
+			return pedido.get();
 
 		} catch (DataAccessException e) {
 			throw new PedidosClientesServiceException("Error al registrar los pedidos", e);

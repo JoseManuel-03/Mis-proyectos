@@ -28,12 +28,12 @@ public class Pedido {
 	@JdbcTypeCode(java.sql.Types.VARCHAR)
 	@Column(name = "uuid_pedido")
 	private UUID uidPedido;
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="dni_cliente")
+	@ManyToOne
+	@JoinColumn(name="dni_cliente", nullable=false)
 	private Cliente cliente;
 	private Date fecha;
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "uuid_pedido")
+	@OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+	@JoinColumn(name = "uuid_pedido", nullable=false)
 	private List<PedidoLinea> lineas;
 
 	public UUID getUidPedido() {
