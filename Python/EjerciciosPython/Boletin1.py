@@ -26,10 +26,11 @@ def abecedario():
     
     letras = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     
+    contador = 0 
     for i in range(len(letras)):
-        if i % 3 == 0:
-            letras.remove[i]
-    
+        if (i+1) % 3 == 0:
+            del letras[i - contador]
+            contador += 1
     print(letras)
     
 
@@ -39,7 +40,17 @@ def abecedario():
 # Escribir una función que convierta un número decimal en binario y otra que convierta un
 # número binario en decimal. 
 
+def decimal_binario(decimal):
+    binario = ""
+    while decimal > 0:
+        binario = str(decimal % 2) + binario  
+        decimal = decimal // 2
+    print(binario)
 
+
+
+def binario_decimal(binario):
+    print(int(binario, 2))
 
 # EJERCICIO 4
 
@@ -60,6 +71,19 @@ def abecedario():
 # Zona B: precio = (metros * 1000 + habitaciones * 5000 + garaje * 15000) * (1-
 # antiguedad/100) * 1.5 
 
+def busqueda_inmuebles():
+    
+    [{'año': 2000, 'metros': 100, 'habitaciones': 3, 'garaje': True, 'zona': 'A'},
+    {'año': 2012, 'metros': 60, 'habitaciones': 2, 'garaje': True, 'zona': 'B'},
+    {'año': 1980, 'metros': 120, 'habitaciones': 4, 'garaje': False, 'zona': 'A'},
+    {'año': 2005, 'metros': 75, 'habitaciones': 3, 'garaje': True, 'zona': 'B'},
+    {'año': 2015, 'metros': 90, 'habitaciones': 2, 'garaje': False, 'zona': 'A'}]
+
+
+# Zona A: precio = (metros * 1000 + habitaciones * 5000 + garaje * 15000) * (1-
+# antiguedad/100)
+# Zona B: precio = (metros * 1000 + habitaciones * 5000 + garaje * 15000) * (1-
+# antiguedad/100) * 1.5 
 
 
 # EJERCICIO 5
@@ -93,4 +117,6 @@ def abecedario():
 if __name__ == "__main__":
     
     #notasAsignaturas()
-    abecedario()
+    #abecedario()
+    #decimal_binario(int(input("Introduce numero decimal ")))
+    binario_decimal(input("Introduce numero binario "))
