@@ -11,9 +11,10 @@ import actores.modelo.Actor;
 @Repository
 
 public interface ActorRepository extends JpaRepository<Actor, Long> {
+	
+	public List<Actor> findByFirstNameContainingOrLastNameContaining(String firstName, String lastName);
 
-	List<Actor> findByFirst_nameContainingOrLast_nameContaining(String firstName, String lastName);
 
-	List<Actor> findByLast_updateBetween(LocalDate fechaInicio, LocalDate fechaFin);
+	public List<Actor> findByLastUpdateBetween(LocalDate fechaInicio, LocalDate fechaFin);
 
 }

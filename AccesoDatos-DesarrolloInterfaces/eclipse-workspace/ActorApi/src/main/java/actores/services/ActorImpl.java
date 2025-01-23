@@ -28,14 +28,12 @@ public class ActorImpl {
 	}
 
 	@Transactional
-
 	public Actor crearActor(Actor actor) {
 		return actorRepository.save(actor);
 
 	}
 
 	@Transactional
-
 	public Actor actualizarActor(Actor actor) throws ActorNotFound {
 		consultarActor(actor.getActorId());
 		return actorRepository.save(actor);
@@ -43,7 +41,6 @@ public class ActorImpl {
 	}
 
 	@Transactional
-
 	public void borrarActor(Long id) throws ActorNotFound {
 		consultarActor(id);
 		actorRepository.deleteById(id);
@@ -51,11 +48,11 @@ public class ActorImpl {
 	}
 
 	public List<Actor> buscarActorNombreApellidos(String firstName, String lastName) {
-		return actorRepository.findByFirst_nameContainingOrLast_nameContaining(firstName, lastName);
+		return actorRepository.findByFirstNameContainingOrLastNameContaining(firstName, lastName);
 	}
 
 	public List<Actor> buscarActorFecha(LocalDate fechaInicio, LocalDate fechaFin) {
-		return actorRepository.findByLast_updateBetween(fechaInicio, fechaFin);
+		return actorRepository.findByLastUpdateBetween(fechaInicio, fechaFin);
 
 	}
 

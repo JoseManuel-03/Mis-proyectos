@@ -1,4 +1,5 @@
 from datetime import datetime
+import math
 
 # EJERCICIO 1
 
@@ -110,9 +111,10 @@ precioEntrada = 3000000000000000000
 # • Si un año es divisible entre 100 y además es divisible entre 400, también resulta bisiesto. 
 
 def añoBisiesto(año):
-    
-    
-    print(resultado)
+    if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0):
+        return print("El año ", año , "es bisiesto.")
+    else:
+        return print("El año" , año ,"no es bisiesto.")
     
 
 
@@ -125,10 +127,17 @@ def añoBisiesto(año):
 # error. El programa termina cuando el usuario introduce un cero. 
 
 def muestraMensaje(numero):
-    
-   
-    print(resultado)
-    
+   meses = ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+         "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+   if numero == 0:
+       print("Programa terminado")
+       return
+   elif 1 <= numero <= len(meses):
+       
+        print("El mes correspondiente es: " , meses[numero - 1])
+   else:
+       
+        print("Error: Número fuera de rango. Debe estar entre 1 y 12")  
 
 
 # EJERCICIO 7
@@ -140,14 +149,35 @@ def muestraMensaje(numero):
 # casos el programa debe ser capaz de calcular y mostrar el resultado adecuado. 
 
 def calculaArea(poligono):
+    opcion = poligono.strip().lower()
+    if opcion == "triángulo":
+        calcular_area_triangulo()
+        return
+    elif opcion == "círculo":
+        calcular_area_circulo()
+        return
+    else:
+        print("Opción no válida. Por favor, elige triángulo o círculo")
     
-    print(resultado)
+def calcular_area_triangulo():
+    
+    base = float(input("Introduce la base del triángulo: " ))
+    altura = float(input("Introduce la altura del triángulo: " ))
+    area = (base * altura) / 2
+    
+    print("El área del triángulo es: ", area)
+
+def calcular_area_circulo():
+    radio = float(input("Introduce el radio del círculo: " ))
+    area = math.pi * radio**2
+    print("El área del círculo es: ", area)
+    
 
 
 
 
 
-#Main para probar las funciones
+#Main para probar las funciones (descomenta cada línea para probar el método)
 if __name__ == "__main__":
     
     #notasAsignaturas()
@@ -155,6 +185,6 @@ if __name__ == "__main__":
     #decimal_binario(int(input("Introduce numero decimal ")))
     #binario_decimal(input("Introduce numero binario "))
     #busqueda_inmuebles(lista, precioEntrada)
-    añoBisiesto(int(input("Introduce año")))
+    #añoBisiesto(int(input("Introduce año")))
     #muestraMensaje(int(input("Introduce numero")))
-    #calculaArea(input("Introduce triangulo o circulo"))
+    #calculaArea(input("Introduce triángulo o círculo "))

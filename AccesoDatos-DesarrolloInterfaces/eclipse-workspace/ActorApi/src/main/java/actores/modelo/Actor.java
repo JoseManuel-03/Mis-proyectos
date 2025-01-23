@@ -1,5 +1,6 @@
 package actores.modelo;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Component;
@@ -18,6 +19,6 @@ public class Actor {
 	private Long actorId;
 	private String firstName;
 	private String lastName;
-	private LocalDateTime lastUpdate;
+	private LocalDate lastUpdate;
 
 }
