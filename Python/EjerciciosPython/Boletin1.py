@@ -1,3 +1,5 @@
+from datetime import datetime
+
 # EJERCICIO 1
 
 # Escribir un programa que almacene las asignaturas de un curso (Matemáticas, Física, Química,
@@ -71,20 +73,34 @@ def binario_decimal(binario):
 # Zona B: precio = (metros * 1000 + habitaciones * 5000 + garaje * 15000) * (1-
 # antiguedad/100) * 1.5 
 
-def busqueda_inmuebles():
+def busqueda_inmuebles(lista, precioEntrada):
+    resultados = []
+    for i in lista:
+        antiguedad = datetime.now().year - i['año']
+        
+        if i['zona'] == 'A':
+            precio = (i['metros'] * 1000 + i['habitaciones'] * 5000 + i['garaje'] * 15000) * (1-antiguedad/100)
+            if precio <= precioEntrada:
+                i['precio'] = precio
+        
+        else:
+            precio = (i['metros'] * 1000 + i['habitaciones'] * 5000 + i['garaje'] * 15000) * (1-antiguedad/100) * 1.5
+            i['precio'] =  precio
+            
+            if precio <= precioEntrada:
+                i['precio'] = precio
+        resultados.append(i)
+    print(resultados)
+    return resultados  
+        
     
-    [{'año': 2000, 'metros': 100, 'habitaciones': 3, 'garaje': True, 'zona': 'A'},
-    {'año': 2012, 'metros': 60, 'habitaciones': 2, 'garaje': True, 'zona': 'B'},
-    {'año': 1980, 'metros': 120, 'habitaciones': 4, 'garaje': False, 'zona': 'A'},
-    {'año': 2005, 'metros': 75, 'habitaciones': 3, 'garaje': True, 'zona': 'B'},
-    {'año': 2015, 'metros': 90, 'habitaciones': 2, 'garaje': False, 'zona': 'A'}]
+lista = [{'año': 2000, 'metros': 100, 'habitaciones': 3, 'garaje': True, 'zona': 'A'},
+ {'año': 2012, 'metros': 60, 'habitaciones': 2, 'garaje': True, 'zona': 'B'},
+ {'año': 1980, 'metros': 120, 'habitaciones': 4, 'garaje': False, 'zona': 'A'},
+ {'año': 2005, 'metros': 75, 'habitaciones': 3, 'garaje': True, 'zona': 'B'},
+ {'año': 2015, 'metros': 90, 'habitaciones': 2, 'garaje': False, 'zona': 'A'}]
 
-
-# Zona A: precio = (metros * 1000 + habitaciones * 5000 + garaje * 15000) * (1-
-# antiguedad/100)
-# Zona B: precio = (metros * 1000 + habitaciones * 5000 + garaje * 15000) * (1-
-# antiguedad/100) * 1.5 
-
+precioEntrada = 3000000000000000000
 
 # EJERCICIO 5
 
@@ -93,12 +109,26 @@ def busqueda_inmuebles():
 # • Un año divisible por 4 es bisiesto y no debe ser divisible entre 100.
 # • Si un año es divisible entre 100 y además es divisible entre 400, también resulta bisiesto. 
 
+def añoBisiesto(año):
+    
+    
+    print(resultado)
+    
+
+
+
 
 # EJERCICIO 6
 
 # Crea una tupla con los meses del año, pide números al usuario, si el numero esta entre 1 y la
 # longitud máxima de la tupla, muestra el contenido de esa posición sino muestra un mensaje de
 # error. El programa termina cuando el usuario introduce un cero. 
+
+def muestraMensaje(numero):
+    
+   
+    print(resultado)
+    
 
 
 # EJERCICIO 7
@@ -108,6 +138,10 @@ def busqueda_inmuebles():
 # que pedir entonces la base y la altura y escribir el área. Si se contesta que se quiere calcular el
 # área de un círculo, el programa tiene que pedir entonces el radio y escribir el área. En ambos
 # casos el programa debe ser capaz de calcular y mostrar el resultado adecuado. 
+
+def calculaArea(poligono):
+    
+    print(resultado)
 
 
 
@@ -119,4 +153,8 @@ if __name__ == "__main__":
     #notasAsignaturas()
     #abecedario()
     #decimal_binario(int(input("Introduce numero decimal ")))
-    binario_decimal(input("Introduce numero binario "))
+    #binario_decimal(input("Introduce numero binario "))
+    #busqueda_inmuebles(lista, precioEntrada)
+    añoBisiesto(int(input("Introduce año")))
+    #muestraMensaje(int(input("Introduce numero")))
+    #calculaArea(input("Introduce triangulo o circulo"))
