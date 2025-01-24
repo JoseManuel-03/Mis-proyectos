@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 import lombok.Data;
 
 @Entity
@@ -17,8 +19,11 @@ public class Actor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long actorId;
+	@NotBlank
 	private String firstName;
+	@NotBlank
 	private String lastName;
+	@PastOrPresent
 	private LocalDate lastUpdate;
 
 }

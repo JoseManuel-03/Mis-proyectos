@@ -1,5 +1,6 @@
 package ceu.dam.ad.users.api;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,15 +14,16 @@ import ceu.dam.ad.users.model.User;
 import ceu.dam.ad.users.service.DuplicateUserException;
 import ceu.dam.ad.users.service.UserException;
 import ceu.dam.ad.users.service.UserNotFoundException;
-import ceu.dam.ad.users.service.UserServiceImpl;
+import ceu.dam.ad.users.service.UserService;
 import ceu.dam.ad.users.service.UserUnauthorizedException;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
+
 @RestController
 public class UserApiService {
 
 	@Autowired
-	private UserServiceImpl service;
+	private UserService service;
 
 	@GetMapping("/usuario/{id}")
 	@Operation(summary = "Consulta de usuarios", description = "Consultar un usuario a partir de un ID")
@@ -40,16 +42,21 @@ public class UserApiService {
 
 	@PostMapping("/usuario")
 	@Operation(summary = "Crear usuario", description = "Crear un usuario")
-	public User crearUsuario(@Valid @RequestBody User user) throws DuplicateUserException, UserException {
+	public User crearUsuario(@Valid @RequestBody CreateUserRequest request)
+			throws DuplicateUserException, UserException {
+
+		User user = new User();
+		ModelMapper mapper = new ModelMapper();
+		mapper.map(request, user);
 		return service.createUser(user);
 
 	}
 
 	@PutMapping("/usuario")
 	@Operation(summary = "Cambiar contraseña de usuarios", description = "Cambiar contraseña un usuario a partir de un Id y una password antigua y otra nueva")
-	public void cambiarContraseña(@RequestParam Long idUser, @RequestParam String oldPassword,
-			@RequestParam String newPassword) throws UserNotFoundException, UserUnauthorizedException, UserException {
-		service.changePassword(idUser, oldPassword, newPassword);
+	public void cambiarContraseña(@RequestBody ChangePasswordRequest request)
+			throws UserNotFoundException, UserUnauthorizedException, UserException {
+		service.changePassword(request.getId(), request.getPasswordOld(), request.getPasswordNew());
 
 	}
 

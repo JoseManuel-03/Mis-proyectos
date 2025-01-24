@@ -10,7 +10,8 @@ public class ValidarionExceptionHandler {
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<String> handle(MethodArgumentNotValidException e) {
-		return ResponseEntity.badRequest().body(e.getFieldError().getDefaultMessage());
+		return ResponseEntity.badRequest()
+				.body(e.getFieldError().getDefaultMessage() + ":" + e.getFieldError().getDefaultMessage());
 
 	}
 
