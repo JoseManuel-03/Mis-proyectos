@@ -2,12 +2,14 @@ package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.modelo.CentroComercial;
 import ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.modelo.Marca;
 import ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.modelo.Pais;
 import ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.modelo.Tienda;
 
-
+@Service
 public interface ComercialService {
 
 	/** Debe buscar en BBDD todos los países cuya descripción empiece por el filtro indicado.

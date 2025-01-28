@@ -33,8 +33,8 @@ public class AltaController extends AppController {
 			mostrarPop();
 			return;
 		}
-		services.addAnimal(animal.setTipo(textField.getText()));
-		changeScene(FXML_ALTASEGUNDAA);
+	//	services.addAnimal(animal.setTipo(textField.getText()));
+	//	changeScene(FXML_ALTASEGUNDAA);
 
 	}
 

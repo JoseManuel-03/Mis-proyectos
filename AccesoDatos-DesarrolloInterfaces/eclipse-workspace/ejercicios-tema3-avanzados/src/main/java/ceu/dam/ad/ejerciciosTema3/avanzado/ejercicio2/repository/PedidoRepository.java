@@ -3,6 +3,7 @@ package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio2.repository;
 import java.util.UUID;
 
 
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

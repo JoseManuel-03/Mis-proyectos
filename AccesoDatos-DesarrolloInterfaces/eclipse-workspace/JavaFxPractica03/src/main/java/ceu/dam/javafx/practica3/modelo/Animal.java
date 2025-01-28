@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Animal {
@@ -13,9 +12,42 @@ public class Animal {
 	private String tipo;
 	private String nombre;
 	private Integer edad;
-	
-	/** Valida si el atributo tipo del animal está correctamente relleno.
-	 * En caso contrario, lanza AnimalDataNotValidException
+
+	public Animal(String tipo, String nombre, Integer edad) {
+		super();
+		this.tipo = tipo;
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Integer getEdad() {
+		return edad;
+	}
+
+	public void setEdad(Integer edad) {
+		this.edad = edad;
+	}
+
+	/**
+	 * Valida si el atributo tipo del animal está correctamente relleno. En caso
+	 * contrario, lanza AnimalDataNotValidException
+	 * 
 	 * @throws AnimalDataNotValidException
 	 */
 	public void validarTipo() throws AnimalDataNotValidException {
@@ -23,11 +55,11 @@ public class Animal {
 			throw new AnimalDataNotValidException("El tipo no puede ser vacío");
 		}
 	}
-	
-	
 
-	/** Valida si todos los atributos del animal están correctamente rellenos.
-	 * En caso contrario, lanza AnimalDataNotValidException
+	/**
+	 * Valida si todos los atributos del animal están correctamente rellenos. En
+	 * caso contrario, lanza AnimalDataNotValidException
+	 * 
 	 * @throws AnimalDataNotValidException
 	 */
 	public void validarTodo() throws AnimalDataNotValidException {
@@ -39,6 +71,5 @@ public class Animal {
 		}
 		validarTipo();
 	}
-	
-	
+
 }

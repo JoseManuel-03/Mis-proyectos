@@ -1,10 +1,10 @@
 package ceu.dam.javafx.practica3.gui;
 
 import java.io.IOException;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.management.RuntimeErrorException;
 
 import ceu.dam.javafx.practica3.App;
 import javafx.fxml.FXMLLoader;
@@ -14,9 +14,9 @@ import javafx.stage.Stage;
 
 public class AppController {
 	
-	public static final String FXML_CONSULTA = "/consulta.fxml";
-	public static final String FXML_ALTA = "/alta.fxml";
-	public static final String FXML_ALTASEGUNDAA = "/altaSegunda.fxml";
+	public static final String FXML_ALTASEGUNDAA = "/app/altaSegunda.fxml";
+	public static final String FXML_ALTA = "/app/alta.fxml";
+	public static final String FXML_CONSULTA = "/app/consulta.fxml";
 
 	private static Stage primaryStage;
 	
