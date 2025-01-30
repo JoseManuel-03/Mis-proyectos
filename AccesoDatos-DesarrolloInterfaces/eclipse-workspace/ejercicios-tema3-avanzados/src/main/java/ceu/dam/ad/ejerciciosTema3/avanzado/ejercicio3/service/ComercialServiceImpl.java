@@ -17,6 +17,7 @@ import ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.repository.CentroComercial
 import ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.repository.MarcaRepository;
 import ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.repository.PaisRepository;
 import ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.repository.TiendaRepository;
+import jakarta.transaction.Transactional;
 
 @Service
 public class ComercialServiceImpl implements ComercialService {
@@ -29,21 +30,11 @@ public class ComercialServiceImpl implements ComercialService {
 	@Autowired
 	private TiendaRepository tiendaRepository;
 
-	/**
-	 * Debe buscar en BBDD todos los países cuya descripción empiece por el filtro
-	 * indicado. Si no se encuentra ninguno, devolverá una lista vacía. Si hay algún
-	 * error, lanzará ComercialException
-	 */
+	//fetch
 	@Override
 	public List<Pais> buscarPaises(String filtro) throws ComercialException {
 		try {
-			List<Pais> listaNueva = new ArrayList<Pais>();
-			List<Pais> lista = paisRepository.findByDescripcionStartsWith(filtro);
-			if (lista.isEmpty()) {
-				return listaNueva;
-			}
-
-			return lista;
+			return paisRepository.findByDescripcionStartsWith(filtro);
 
 		} catch (DataAccessException e) {
 			throw new ComercialException("Error al insertar marca", e);
@@ -51,11 +42,7 @@ public class ComercialServiceImpl implements ComercialService {
 
 	}
 
-	/**
-	 * Debe insertar la Marca recibida en BBDD. No se insertarán sus centros
-	 * comerciales asociados ni su país. Si hay algún error, lanzará
-	 * ComercialException
-	 */
+
 	@Override
 	public void insertarMarca(Marca marca) throws ComercialException {
 		try {
@@ -66,21 +53,12 @@ public class ComercialServiceImpl implements ComercialService {
 
 	}
 
-	/**
-	 * Debe insertar el Centro Comercial recibido en BBDD. No se insertará su país
-	 * ni marcas en ambos casos deben existir previamente. Pero sí se insertará su
-	 * lista de tiendas. Si hay algún error, lanzará ComercialException
-	 */
+//cascade
 	@Override
 	public void insertarCentroComercial(CentroComercial cc) throws ComercialException {
 		try {
 
-			for (Marca marcas : cc.getMarcas()) {
-				String codigo = marcas.getCodigo();
-				if (marcaRepository.findById(codigo).isEmpty()) {
-					marcaRepository.save(marcas);
-				}
-			}
+			
 
 			if (paisRepository.findById(cc.getPais().getCodigo()).isEmpty()) {
 				paisRepository.save(cc.getPais());
@@ -91,15 +69,21 @@ public class ComercialServiceImpl implements ComercialService {
 			throw new ComercialException("Error al insertar marca", e);
 		}
 	}
+	/*
+	
+	public void insertarPaises(List<Pais>paises) {      Ejemplo si falla alguno ,continua con los demas, (no es transactional)
+		for (Pais pais : paises) {
+			try {
+				paisRepository.save(pais);
+			} catch (DataAccessException e) {
+					
+			}
+		}
+	}*/
+	
+	
 
-	/**
-	 * Consultará un centro comercial a partir de su uuid. Si no existe, lanzará
-	 * NotFoundException. La entidad consultada tendrá que traer su país, sus
-	 * tiendas y sus marcas. Si hay algún error, lanzará ComercialException
-	 * 
-	 * @throws NotFoundException
-	 * 
-	 */
+
 	@Override
 	public CentroComercial consultarCentroComercial(String uuidCentro) throws ComercialException, NotFoundException {
 		try {
@@ -117,13 +101,7 @@ public class ComercialServiceImpl implements ComercialService {
 		}
 	}
 
-	/**
-	 * Consultará una tienda a partir de su id. Si no existe, lanzará
-	 * NotFoundException. La entidad consultada no traerá ninguna de sus entidades
-	 * asociadas. Si hay algún error, lanzará ComercialException
-	 * 
-	 * @throws NotFoundException
-	 */
+
 	@Override
 	public Tienda consularTienda(Long idTienda) throws ComercialException, NotFoundException {
 		try {
@@ -139,10 +117,6 @@ public class ComercialServiceImpl implements ComercialService {
 		}
 	}
 
-	/**
-	 * Debe borrar la tienda con el id indicado. Sólo borrará la tienda, ninguna de
-	 * sus entidades asociadas. Si hay algún error, lanzará ComercialException
-	 */
 	@Override
 	public void borrarTienda(Long idTienda) throws ComercialException {
 		try {
@@ -153,12 +127,9 @@ public class ComercialServiceImpl implements ComercialService {
 
 	}
 
-	/**
-	 * Debe borrar el centro comercial con el uuid indicado. Borrará también su
-	 * lista de tiendas asociada, pero no el resto de entidades. Si hay algún error,
-	 * lanzará ComercialException
-	 */
+
 	@Override
+	@Transactional
 	public void borrarCentroComercial(String uuidCentro) throws ComercialException {
 		try {
 			UUID uuidNuevo = UUID.fromString(uuidCentro);

@@ -13,7 +13,6 @@ public class App extends Application{
 		AppController controller = new AppController(primaryStage);
 		controller.changeScene(AppController.FXML_CONSULTA);
 		primaryStage.setResizable(false);
-		primaryStage.initStyle(StageStyle.TRANSPARENT);
 		primaryStage.show();
 	}
 	

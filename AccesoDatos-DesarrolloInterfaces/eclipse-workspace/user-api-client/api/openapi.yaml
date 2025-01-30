@@ -1,0 +1,170 @@
+openapi: 3.1.0
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- description: Generated server url
+  url: http://localhost:8080
+paths:
+  /usuario:
+    get:
+      description: Consultar un usuario a partir de un login y password
+      operationId: loginUsuario
+      parameters:
+      - explode: true
+        in: query
+        name: login
+        required: true
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: password
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/User'
+          description: OK
+      security:
+      - Authorization: []
+      summary: Consulta de usuarios
+      tags:
+      - user-api-service
+      x-accepts:
+      - '*/*'
+    post:
+      description: Crear un usuario
+      operationId: crearUsuario
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/User'
+          description: OK
+      security:
+      - Authorization: []
+      summary: Crear usuario
+      tags:
+      - user-api-service
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+    put:
+      description: Cambiar contraseña un usuario a partir de un Id y una password
+        antigua y otra nueva
+      operationId: cambiarContraseña
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangePasswordRequest'
+        required: true
+      responses:
+        "200":
+          description: OK
+      security:
+      - Authorization: []
+      summary: Cambiar contraseña de usuarios
+      tags:
+      - user-api-service
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /usuario/{id}:
+    get:
+      description: Consultar un usuario a partir de un ID
+      operationId: consultarUsuario
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/User'
+          description: OK
+      security:
+      - Authorization: []
+      summary: Consulta de usuarios
+      tags:
+      - user-api-service
+      x-accepts:
+      - '*/*'
+components:
+  schemas:
+    ChangePasswordRequest:
+      example:
+        passwordOld: passwordOld
+        id: 0
+        passwordNew: passwordNew
+      properties:
+        id:
+          format: int64
+          type: integer
+        passwordOld:
+          type: string
+        passwordNew:
+          type: string
+    CreateUserRequest:
+      example:
+        password: password
+        email: email
+        username: username
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+    User:
+      example:
+        password: password
+        createdDate: 2000-01-23
+        id: 0
+        lastLoginDate: 2000-01-23
+        email: email
+        username: username
+      properties:
+        id:
+          format: int64
+          type: integer
+        username:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+        createdDate:
+          format: date
+          type: string
+        lastLoginDate:
+          format: date
+          type: string
+  securitySchemes:
+    Authorization:
+      in: header
+      name: API-KEY-USER
+      type: apiKey
+

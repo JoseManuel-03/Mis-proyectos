@@ -16,7 +16,7 @@ public class Marca {
 	private String codigo;
 	private String nombreComercial;
 	@ManyToOne
-	@JoinColumn(name= "cod_pais")
+	@JoinColumn(name= "cod_pais", nullable = false)
 	private Pais pais;
 	@ManyToMany(mappedBy = "marcas")	
 	private List<CentroComercial> centrosComerciales;

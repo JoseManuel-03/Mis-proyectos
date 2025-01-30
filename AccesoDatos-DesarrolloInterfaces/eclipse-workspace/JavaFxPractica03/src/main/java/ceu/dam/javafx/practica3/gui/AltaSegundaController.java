@@ -3,6 +3,7 @@ package ceu.dam.javafx.practica3.gui;
 import java.io.Serial;
 
 import ceu.dam.javafx.practica3.modelo.Animal;
+import ceu.dam.javafx.practica3.service.AnimalDataNotValidException;
 import ceu.dam.javafx.practica3.service.AnimalesServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,22 +34,24 @@ public class AltaSegundaController extends AppController {
 
 	@FXML
 	void presionarBoton(ActionEvent event) {
-		if (textFieldEdad.getText().isEmpty() || textFiledNombre.getText().isEmpty()) {
-			mostrarPop();
-			return;
+		try {
+			animal.setEdad(Integer.parseInt(textFieldEdad.getText()));
+			animal.setNombre(textFiledNombre.getText());
+			animal.validarTodo();
+			AnimalesServices service = new AnimalesServices();
+			service.addAnimal(animal);
+			ConsultaController controller = (ConsultaController) changeScene(FXML_CONSULTA);
+			controller.consultar(animal.getTipo());
+
+		} catch (NumberFormatException e) {
+			mostrarPop("La edad no puede ser vacía y tiene que ser un número");
+		} catch (AnimalDataNotValidException e) {
+			mostrarPop(e.getMessage());
 		}
-		animal.setEdad(Integer.parseInt(textFieldEdad.getText()));
-		animal.setNombre(textFiledNombre.getText());
-		changeScene(FXML_CONSULTA);
 	}
 
-	public void mostrarPop() {
-		Alert a = new Alert(AlertType.ERROR);
-		a.setHeaderText(null);
-		a.setContentText("El nombre y edad no pueden estar vacíos");
-		a.setTitle("Error");
-		a.showAndWait();
-
+	public void initialize() {
+		animal = (Animal) getParam(PARAM_ANIMAL);
 	}
 
 }

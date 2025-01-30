@@ -20,6 +20,12 @@
     	<artifactId>javafx-controls</artifactId>
     	<version>23.0.1</version>
 	</dependency>
+	<dependency>
+		    <groupId>ceu</groupId>
+    <artifactId>user-api-client</artifactId>
+     <version>v0</version>
+	</dependency>
+	
 
 	<dependency>
     <groupId>org.openjfx</groupId>
@@ -31,6 +37,11 @@
 		<groupId>CEU</groupId>
 		<artifactId>javaFX</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>ceu.dam.ad</groupId>
+		<artifactId>user-api-server</artifactId>
+		<version>1.0.0</version>
 	</dependency>
 	</dependencies>
 </project>

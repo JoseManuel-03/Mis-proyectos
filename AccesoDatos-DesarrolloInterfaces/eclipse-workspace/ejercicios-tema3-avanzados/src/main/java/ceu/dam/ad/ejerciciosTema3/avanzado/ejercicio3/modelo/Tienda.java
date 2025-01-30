@@ -1,13 +1,13 @@
 package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.modelo;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 @Entity
 @Table(name="tiendas")
@@ -16,7 +16,7 @@ public class Tienda {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String ubicacion;
-	@OneToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="cod_marca")
 	private Marca marca;
 	

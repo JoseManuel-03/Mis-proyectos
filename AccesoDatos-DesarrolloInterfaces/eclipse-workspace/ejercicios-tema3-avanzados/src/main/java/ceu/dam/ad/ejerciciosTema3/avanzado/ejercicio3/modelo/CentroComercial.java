@@ -1,6 +1,7 @@
 package ceu.dam.ad.ejerciciosTema3.avanzado.ejercicio3.modelo;
 
 import java.util.List;
+
 import java.util.UUID;
 
 import org.hibernate.annotations.JdbcTypeCode;
@@ -22,17 +23,16 @@ public class CentroComercial {
 	@Id
 	@GeneratedValue
 	@JdbcTypeCode(java.sql.Types.VARCHAR)
-	@Column(name = "uuidCentro")
+	@Column(name = "uuid_centro")
 	private UUID id;
-	@Column(name = "nombreComercial")
+	@Column(name = "nombre_comercial")
 	private String nombre;
-
 	private String direccion;
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "cod_pais")
+	@ManyToOne
+	@JoinColumn(name = "cod_pais", nullable = false)
 	private Pais pais;
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "uuid_centro")
+	@JoinColumn(name = "uuid_centro", nullable = false)
 	private List<Tienda> tiendas;
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "centro_comercial_marcas", joinColumns = {

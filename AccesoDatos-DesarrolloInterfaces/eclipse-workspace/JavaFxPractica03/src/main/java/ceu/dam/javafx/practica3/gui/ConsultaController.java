@@ -18,6 +18,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.effect.BoxBlur;
 import javafx.scene.layout.AnchorPane;
 
 public class ConsultaController extends AppController {
@@ -41,10 +42,10 @@ public class ConsultaController extends AppController {
 	private TableColumn<Animal, String> tipoColumn;
 
 	@FXML
-	private Button nuevoBoton;
+	private TableView<Animal> tabla;
 
 	@FXML
-	private TableView<Animal> tabla;
+	private Button nuevoBoton;
 
 	@FXML
 	private TextField textFiled;
@@ -55,39 +56,45 @@ public class ConsultaController extends AppController {
 	private ObservableList<Animal> datos;
 
 	@FXML
-	void presionarConsultar(ActionEvent event) {
-		try {
-			services = new AnimalesServices();
+	public void presionarConsultar(ActionEvent event) {
+		consultar(textFiled.getText());
+	}
 
-			Task<List<Animal>> task = new Task<List<Animal>>() {
+	public void consultar(String textoFiltro) {
+		textFiled.setText(textoFiltro);
+		services = new AnimalesServices();
 
-				@Override
-				protected List<Animal> call() throws Exception {
-					return services.consultarAnimales(textFiled.getText());
-				};
+		tabla.setEffect(new BoxBlur());
 
-				@Override
-				protected void succeeded() {
+		Task<List<Animal>> task = new Task<List<Animal>>() {
 
-					List<Animal> resultado = getValue();
-					datos.setAll(resultado);
-					updateProgress(100, 100);
-
-				};
-
-				@Override
-				protected void failed() {
-					datos.clear();
-					System.out.println(getException().getMessage());
-
-				};
+			@Override
+			protected List<Animal> call() throws Exception {
+				return services.consultarAnimales(textoFiltro);
 			};
-			new Thread(task).start();
-			progressBar.progressProperty().bind(task.progressProperty());
 
-		} catch (Exception e) {
-			mostrarPop();
-		}
+			@Override
+			protected void succeeded() {
+				tabla.setEffect(null);
+				List<Animal> resultado = getValue();
+				datos.setAll(resultado);
+				updateProgress(100, 100);
+
+			};
+
+			@Override
+			protected void failed() {
+				tabla.setEffect(null);
+				datos.clear();
+				mostrarPop(getException().getMessage());
+				System.out.println(getException().getMessage());
+
+			};
+		};
+		progressBar.progressProperty().bind(task.progressProperty());
+		tabla.setEffect(new BoxBlur());
+		new Thread(task).start();
+
 	}
 
 	@FXML
@@ -103,15 +110,6 @@ public class ConsultaController extends AppController {
 
 		datos = FXCollections.observableArrayList();
 		tabla.setItems(datos);
-
-	}
-
-	public void mostrarPop() {
-		Alert a = new Alert(AlertType.ERROR);
-		a.setHeaderText(null);
-		a.setContentText("No hay registro en la bbdd con ese filtro");
-		a.setTitle("Error");
-		a.showAndWait();
 
 	}
 

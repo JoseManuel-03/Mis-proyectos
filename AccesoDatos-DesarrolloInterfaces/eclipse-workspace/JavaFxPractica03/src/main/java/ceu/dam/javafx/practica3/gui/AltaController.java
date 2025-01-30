@@ -1,20 +1,20 @@
 package ceu.dam.javafx.practica3.gui;
 
 import ceu.dam.javafx.practica3.modelo.Animal;
+import ceu.dam.javafx.practica3.service.AnimalDataNotValidException;
 import ceu.dam.javafx.practica3.service.AnimalesServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 
 public class AltaController extends AppController {
 
 	private AnimalesServices services;
 	private Animal animal;
+
 	@FXML
 	private Button botonContinuar;
 
@@ -29,22 +29,21 @@ public class AltaController extends AppController {
 
 	@FXML
 	void presionarButon(ActionEvent event) {
-		if (textField.getText().isEmpty()) {
-			mostrarPop();
-			return;
-		}
-	//	services.addAnimal(animal.setTipo(textField.getText()));
-	//	changeScene(FXML_ALTASEGUNDAA);
+		Animal animal = (Animal) getParam(PARAM_ANIMAL);
+		animal.setTipo(textField.getText());
 
+		try {
+			animal.validarTipo();
+			changeScene(FXML_ALTASEGUNDAA);
+
+		} catch (AnimalDataNotValidException e) {
+			mostrarPop(e.getMessage());
+		}
 	}
 
-	public void mostrarPop() {
-		Alert a = new Alert(AlertType.ERROR);
-		a.setHeaderText(null);
-		a.setContentText("El tipo indicado no puede ser vacío");
-		a.setTitle("Error");
-		a.showAndWait();
-
+	public void initialize() {
+		animal = new Animal();
+		addParam(PARAM_ANIMAL, animal);
 	}
 
 }

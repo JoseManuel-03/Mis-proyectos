@@ -17,9 +17,11 @@ import ceu.dam.ad.users.service.UserNotFoundException;
 import ceu.dam.ad.users.service.UserService;
 import ceu.dam.ad.users.service.UserUnauthorizedException;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 
 @RestController
+@SecurityRequirement(name = "Authorization")
 public class UserApiService {
 
 	@Autowired

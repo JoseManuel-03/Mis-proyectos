@@ -13,13 +13,6 @@ public class Animal {
 	private String nombre;
 	private Integer edad;
 
-	public Animal(String tipo, String nombre, Integer edad) {
-		super();
-		this.tipo = tipo;
-		this.nombre = nombre;
-		this.edad = edad;
-	}
-
 	public String getTipo() {
 		return tipo;
 	}
