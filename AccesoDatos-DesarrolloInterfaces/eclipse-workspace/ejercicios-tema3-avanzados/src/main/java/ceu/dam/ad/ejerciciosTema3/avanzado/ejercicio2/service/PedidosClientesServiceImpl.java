@@ -120,6 +120,7 @@ public class PedidosClientesServiceImpl implements PedidosClientesService {
 			return cliente.get();
 
 		} catch (DataAccessException e) {
+			
 			throw new PedidosClientesServiceException("Error al registrar los cliente", e);
 		}
 	}
