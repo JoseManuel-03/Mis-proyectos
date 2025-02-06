@@ -4,10 +4,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import ceu.dam.ad.mongo.model.Pedido;
 import ceu.dam.ad.mongo.model.PedidoDetalle;
-@Repository
+@Service
 public interface PedidoService{
 	
 	/** Creará el pedido recibido en mongoDB. Si ya existe un pedido con ese número, lanzará DatosIncorrectosException.

@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -11,6 +13,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
+@Document
 public class Pedido {
 	@Id
 	private String id;
@@ -19,6 +22,7 @@ public class Pedido {
 	private Cliente cliente;
 	@NotBlank
 	@NotNull
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private LocalDate fecha;
 	@NotBlank
 	@NotNull

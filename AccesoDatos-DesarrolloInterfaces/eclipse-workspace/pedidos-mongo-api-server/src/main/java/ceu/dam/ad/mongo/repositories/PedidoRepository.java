@@ -14,8 +14,6 @@ public interface PedidoRepository extends MongoRepository<Pedido, String>, Custo
 	
 	List<Pedido> findByNumero(Integer numero);
 	
-	List<Pedido> findByCliente(Cliente cliente);
-	
 	List<Pedido> findByFechaBetween(LocalDate desde, LocalDate hasta);
 	
 

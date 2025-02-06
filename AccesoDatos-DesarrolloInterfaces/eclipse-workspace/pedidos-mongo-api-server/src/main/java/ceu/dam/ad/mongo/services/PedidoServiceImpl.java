@@ -7,13 +7,14 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import ceu.dam.ad.mongo.model.Pedido;
 import ceu.dam.ad.mongo.model.PedidoDetalle;
 import ceu.dam.ad.mongo.repositories.CustomPedidoRepository;
 import ceu.dam.ad.mongo.repositories.PedidoRepository;
 
-@Repository
+@Service
 public class PedidoServiceImpl implements PedidoService {
 
 	@Autowired
@@ -54,6 +55,7 @@ public class PedidoServiceImpl implements PedidoService {
 	@Override
 	public List<Pedido> buscarPedidos(LocalDate desde, LocalDate hasta) {
 		try {
+
 			return pedidoRepository.findByFechaBetween(desde, hasta);
 		} catch (DataAccessException e) {
 			throw e;
@@ -79,10 +81,8 @@ public class PedidoServiceImpl implements PedidoService {
 				throw new DatosIncorrectosException("Error pedido no encontrado");
 			}
 			Pedido pedido = pedidoOpt.get();
-			for (PedidoDetalle pedidoDetalle : pedido.getDetalles()) {
-				pedidoDetalle.setArticulo(detalle.getArticulo());
-				pedidoDetalle.setCantidad(detalle.getCantidad());
-			}
+
+			pedido.getDetalles().add(detalle);
 
 			return pedidoRepository.save(pedido);
 

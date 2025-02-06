@@ -18,7 +18,7 @@ public class CustomPedidoRepositoryImpl implements CustomPedidoRepository {
 	public List<Pedido> buscarPorPedidosClientes(String dni) {
 		Query query = new Query();
 		
-		query.addCriteria(Criteria.where("pedidos").gt(dni));
+		query.addCriteria(Criteria.where("cliente.dni").gt(dni));
 		
 		return mongoTemplate.find(query, Pedido.class);
 	}
