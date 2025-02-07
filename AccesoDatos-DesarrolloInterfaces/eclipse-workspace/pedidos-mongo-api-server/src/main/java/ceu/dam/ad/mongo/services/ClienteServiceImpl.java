@@ -18,7 +18,6 @@ public class ClienteServiceImpl implements ClienteService {
 
 	@Override
 	public Cliente crearCliente(Cliente cliente) throws DatosIncorrectosException {
-
 		try {
 
 			if (!clienteRepository.findByDni(cliente.getDni()).isEmpty()) {
@@ -34,17 +33,15 @@ public class ClienteServiceImpl implements ClienteService {
 	@Override
 	public Cliente actualizarCliente(Cliente cliente) throws DatosIncorrectosException {
 		try {
-			
+
 			Optional<Cliente> clienteExiste = clienteRepository.findById(cliente.getId());
-			if(clienteExiste.isEmpty()) {
+			if (clienteExiste.isEmpty()) {
 				Optional<Cliente> clienteExiste2 = clienteRepository.findByDni(cliente.getDni());
-				if(clienteExiste2.isEmpty()) {
+				if (clienteExiste2.isEmpty()) {
 					throw new DatosIncorrectosException("Error al registrar los cliente");
 				}
 			}
 			return clienteRepository.save(cliente);
-			
-			
 
 		} catch (DataAccessException e) {
 			throw new DatosIncorrectosException("Error al registrar los cliente", e);
