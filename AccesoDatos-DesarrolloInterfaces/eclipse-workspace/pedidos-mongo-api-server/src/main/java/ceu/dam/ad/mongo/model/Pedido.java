@@ -31,5 +31,38 @@ public class Pedido {
 	@NotNull
 	@Size(min = 1)
 	private List<PedidoDetalle> detalles;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	public LocalDate getFecha() {
+		return fecha;
+	}
+	public void setFecha(LocalDate fecha) {
+		this.fecha = fecha;
+	}
+	public Integer getNumero() {
+		return numero;
+	}
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+	public List<PedidoDetalle> getDetalles() {
+		return detalles;
+	}
+	public void setDetalles(List<PedidoDetalle> detalles) {
+		this.detalles = detalles;
+	}
+	
+	
 
 }
