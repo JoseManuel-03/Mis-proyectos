@@ -1,6 +1,7 @@
 package ceu.dam.ad.users.service;
 
 import java.time.LocalDate;
+
 import java.util.Optional;
 
 import org.apache.commons.codec.digest.DigestUtils;
