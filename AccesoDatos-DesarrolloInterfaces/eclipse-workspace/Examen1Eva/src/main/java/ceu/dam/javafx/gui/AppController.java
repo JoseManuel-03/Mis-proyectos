@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import java.util.HashMap;
 import java.util.Map;
-
+import java.util.Optional;
 
 import ceu.dam.javafx.App;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 public class AppController {
@@ -19,6 +20,8 @@ public class AppController {
 	private static final String PATH_BASE = "/app/";
 	
 	public static final String FXML_BIENVENIDA = PATH_BASE + "bienvenida.fxml";
+	public static final String FXML_ALTA = PATH_BASE + "alta.fxml";
+
 	
 
 	private static Stage primaryStage;
@@ -71,6 +74,20 @@ public class AppController {
 		a.setContentText(mensaje);
 		a.setTitle("Error");
 		a.showAndWait();
+
+	}
+	
+	public void mostrarSalir(String mensaje) {
+		Alert a = new Alert(AlertType.CONFIRMATION);
+		a.setHeaderText(null);
+		a.setContentText(mensaje);
+		a.setTitle("Salir");
+		Optional<ButtonType> result = a.showAndWait();
+		if(result.get() == ButtonType.OK) {
+			System.exit(0);
+		}else if(result.get() == ButtonType.CANCEL) {
+			changeScene(FXML_BIENVENIDA);
+		}
 
 	}
 
