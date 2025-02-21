@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceu.dam.javafx.gui.MenuController">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Componentes">
+            <items>
+              <MenuItem fx:id="comboBox" mnemonicParsing="false" onAction="#presionarComboBox" text="ComboBox" />
+                  <MenuItem fx:id="tabla" mnemonicParsing="false" onAction="#presionarTabla" text="Tabla" />
+                  <MenuItem fx:id="colorPicker" mnemonicParsing="false" onAction="#presionarcolorPicker" text="ColorPicker" />
+                  <MenuItem fx:id="datePicker" mnemonicParsing="false" onAction="#presionarDatePicker" text="DatePicker" />
+                  <MenuItem fx:id="slider" mnemonicParsing="false" onAction="#presionarSlider" text="Slider" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Otros">
+            <items>
+                  <MenuItem fx:id="salir" mnemonicParsing="false" onAction="#presionarSalir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Label text="MENU" textFill="#f208da" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Times New Roman Italic" size="36.0" />
+         </font>
+      </Label>
+   </center>
+</BorderPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceu.dam.javafx.gui.TablaController">
+   <children>
+      <TableView fx:id="tabla" layoutX="59.0" layoutY="46.0" prefHeight="224.0" prefWidth="502.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="columnaTipo" prefWidth="151.0" text="TIPO" />
+            <TableColumn fx:id="columnaNombre" prefWidth="191.0" text="NOMBRE" />
+            <TableColumn fx:id="columnaEdad" minWidth="8.0" prefWidth="146.0" text="EDAD" />
+         </columns>
+      </TableView>
+      <Button fx:id="botonNuevo" layoutX="394.0" layoutY="281.0" mnemonicParsing="false" onAction="#presionarNuevo" prefHeight="25.0" prefWidth="92.0" text="NUEVO" />
+      <Button fx:id="botonConsultar" layoutX="274.0" layoutY="14.0" mnemonicParsing="false" onAction="#presionarConsultar" prefHeight="25.0" prefWidth="92.0" text="CONSULTAR" />
+      <TextField fx:id="textField" layoutX="59.0" layoutY="14.0" prefHeight="25.0" prefWidth="184.0" />
+      <ProgressBar fx:id="progressBar" layoutX="55.0" layoutY="284.0" prefHeight="18.0" prefWidth="255.0" />
+   </children>
+</Pane>
