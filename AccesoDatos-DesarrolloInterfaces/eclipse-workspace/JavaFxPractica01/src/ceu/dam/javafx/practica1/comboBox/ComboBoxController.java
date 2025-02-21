@@ -1,9 +1,9 @@
 package ceu.dam.javafx.practica1.comboBox;
 
 import ceu.dam.javafx.practica1.app.AppController;
+
 import ceu.dam.javafx.practica1.menu.MenuController;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -14,7 +14,7 @@ public class ComboBoxController extends AppController {
 	
 	private MenuController controller;
 
-	@FXML
+	@FXML 
 	private Button botonImprimir;
 
 	@FXML
