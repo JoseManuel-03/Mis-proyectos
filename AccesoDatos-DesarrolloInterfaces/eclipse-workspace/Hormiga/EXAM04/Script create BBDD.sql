@@ -1,0 +1,61 @@
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+CREATE DATABASE IF NOT EXISTS `exam04-ad` /*!40100 DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci */;
+USE `exam04-ad`;
+
+CREATE TABLE IF NOT EXISTS `alumno` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `dni` varchar(255) DEFAULT NULL,
+  `fecha_matriculacion` date DEFAULT NULL,
+  `nombre_completo` varchar(255) DEFAULT NULL,
+  `cod_ciclo` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKrxh8tgxdmejd90t1yxnhv7nkf` (`cod_ciclo`),
+  CONSTRAINT `FKrxh8tgxdmejd90t1yxnhv7nkf` FOREIGN KEY (`cod_ciclo`) REFERENCES `ciclo` (`cod_ciclo`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3;
+
+
+CREATE TABLE IF NOT EXISTS `asignatura` (
+  `codigo` varchar(255) NOT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
+  `cod_ciclo` varchar(255) NOT NULL,
+  PRIMARY KEY (`codigo`),
+  KEY `FKknws2rx2j3e7mswye56oklee8` (`cod_ciclo`),
+  CONSTRAINT `FKknws2rx2j3e7mswye56oklee8` FOREIGN KEY (`cod_ciclo`) REFERENCES `ciclo` (`cod_ciclo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+CREATE TABLE IF NOT EXISTS `ciclo` (
+  `cod_ciclo` varchar(255) NOT NULL,
+  `descripcion` varchar(255) DEFAULT NULL,
+  `id_tutor` bigint(20) NOT NULL,
+  PRIMARY KEY (`cod_ciclo`),
+  UNIQUE KEY `UKhce22hgqlnns4gsk5052q5oo2` (`id_tutor`),
+  CONSTRAINT `FKk7qxc3lfes5adyw02gfaoh1an` FOREIGN KEY (`id_tutor`) REFERENCES `tutor` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+CREATE TABLE IF NOT EXISTS `tutor` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
+
+CREATE USER 'exam04-ad'@'localhost' IDENTIFIED BY 'exam04-ad';
+GRANT USAGE ON *.* TO 'exam04-ad'@'localhost';
+GRANT EXECUTE, SELECT, SHOW VIEW, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, CREATE TEMPORARY TABLES, CREATE VIEW, DELETE, DROP, EVENT, INDEX, INSERT, REFERENCES, TRIGGER, UPDATE, LOCK TABLES  ON `exam04-ad`.* TO 'exam04-ad'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

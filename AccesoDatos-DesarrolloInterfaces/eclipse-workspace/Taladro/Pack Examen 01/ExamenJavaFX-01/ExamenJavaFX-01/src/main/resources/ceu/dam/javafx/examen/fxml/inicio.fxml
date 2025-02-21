@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceu.dam.javafx.examen.gui.controller.InicioController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="reparaciones" mnemonicParsing="false" text="Reparaciones">
+            <items>
+              <MenuItem fx:id="nueva" mnemonicParsing="false" onAction="#presionarNueva" text="Nueva" />
+                  <MenuItem fx:id="buscar" mnemonicParsing="false" onAction="#presionarBuscar" text="Buscar" />
+            </items>
+          </Menu>
+          <Menu fx:id="salir" mnemonicParsing="false" text="Salir">
+            <items>
+              <MenuItem fx:id="cerrarCoche" mnemonicParsing="false" onAction="#presionarCerrar" text="Cerrar coche" />
+                  <MenuItem fx:id="cerrarApp" mnemonicParsing="false" onAction="#presionarCerrarApp" text="Cerrar aplicacion" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelCoche" layoutX="233.0" layoutY="125.0" text="DATOS DEL COCHE" textFill="#1d09d3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelDatos" layoutX="265.0" layoutY="206.0" prefHeight="20.0" prefWidth="49.0" text="Label" textFill="#da0303">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

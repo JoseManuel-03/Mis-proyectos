@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ExamenJavaFX-01-jordonez5404/src/main/resources/ceu/dam/javafx/examen/fxml/nuevaReparacion&apos; to &apos;nuevaReparacion.fxml&apos;" description="Rename resource &apos;nuevaReparacion&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/ceu/dam/javafx/examen/fxml/nuevaReparacion" name="nuevaReparacion.fxml" stamp="1740066189830" updateReferences="true"/>
+</session>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceu.dam.javafx.examen.gui.controller.NuevaReparacionController">
+   <children>
+      <Label fx:id="labelNueva" layoutX="220.0" layoutY="102.0" text="NUEVA REPARACION" textFill="#3409e1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNo" layoutX="161.0" layoutY="186.0" text="No tiene permisos para crear reparaciones" textFill="#e00b0b">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCoche" layoutX="68.0" layoutY="288.0" text="Coche:" />
+      <Label fx:id="labelDatos" layoutX="125.0" layoutY="288.0" prefHeight="17.0" prefWidth="201.0" text="Label" textFill="#260efc" />
+   </children>
+</Pane>

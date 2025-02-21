@@ -1,0 +1,30 @@
+package ceu.dam.examen.model;
+
+public class Tutor {
+
+	private Long id;
+	private String nombre; // no puede ser blanco
+	private String email; // no puede ser blanco y debe tener un formato de email correcto
+	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	
+}

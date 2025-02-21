@@ -1,0 +1,50 @@
+package com.example.demo.api;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Alumno;
+import com.example.demo.model.Ciclo;
+import com.example.demo.services.MatriculasServiceImpl;
+import com.example.demo.services.NoExisteException;
+import com.example.demo.services.RepetidosException;
+
+@RestController
+public class MatriculasApiService {
+	@Autowired
+	private MatriculasServiceImpl matriculasServiceImpl;
+
+	@GetMapping("/alumno/dni")
+	public Alumno consultarAlumno(String dni) throws NoExisteException {
+		return matriculasServiceImpl.consultarAlumno(dni);
+	}
+
+	@GetMapping("/ciclo/codigo")
+	public Ciclo consultarCiclo(String codigo) throws NoExisteException {
+		return matriculasServiceImpl.consultarCiclo(codigo);
+
+	}
+	@PostMapping("/ciclo")
+	public void crearCiclo(Ciclo ciclo) throws RepetidosException {
+		matriculasServiceImpl.crearCiclo(ciclo);
+
+	}
+
+	public Alumno matricularAlumno(String dni, String nombre, String codCiclo)
+			throws NoExisteException, RepetidosException {
+		return matriculasServiceImpl.matricularAlumno(dni, nombre, codCiclo);
+	}
+
+	@GetMapping
+	public List<Alumno> consultarAlumnosMatriculados(String codCiclo, LocalDate fechaDesde, LocalDate fechaHasta)
+			throws NoExisteException {
+		return matriculasServiceImpl.consultarAlumnosMatriculados(codCiclo, fechaDesde, fechaHasta);
+
+	}
+
+}

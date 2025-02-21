@@ -1,0 +1,5 @@
+package ceu.dam.javafx.examen.gui.controller;
+
+public class InicioController extends AppController{
+
+}

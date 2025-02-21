@@ -1,0 +1,12 @@
+package com.example.demo.services;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+public class NoExisteExceptionHandler {
+	
+	@ExceptionHandler(RepetidosException.class)
+	public ResponseEntity<String> handle(RepetidosException e){
+		return ResponseEntity.badRequest().body(e.getMessage());
+	}
+}

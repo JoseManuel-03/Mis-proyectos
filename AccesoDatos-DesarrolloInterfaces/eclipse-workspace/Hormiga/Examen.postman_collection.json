@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "bc2177da-b522-49b0-b1de-eb5bbe7d2f6b",
+		"name": "Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41195935"
+	},
+	"item": [
+		{
+			"name": "examen",
+			"item": [
+				{
+					"name": "crearCiclo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"string\",\r\n  \"descripcion\": \"string\",\r\n  \"tutor\": {\r\n    \"id\": 9007199254740991,\r\n    \"email\": \"string\",\r\n    \"nombre\": \"string\"\r\n  },\r\n  \"asignaturas\": [\r\n    {\r\n      \"codigo\": \"string\",\r\n      \"nombre\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ciclo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ciclo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "matricularAlumno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/matricula?dni=1&nombre=p&codCiclo=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matricula"
+							],
+							"query": [
+								{
+									"key": "dni",
+									"value": "1"
+								},
+								{
+									"key": "nombre",
+									"value": "p"
+								},
+								{
+									"key": "codCiclo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarAlumno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/alumno/dni?dni=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alumno",
+								"dni"
+							],
+							"query": [
+								{
+									"key": "dni",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarCiclo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ciclo?codigo=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ciclo"
+							],
+							"query": [
+								{
+									"key": "codigo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarAlumnosMatriculados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/matricula/codciclo?codCiclo=1&fechaDesde=2025/01/03&fechaHasta=2025/03/03",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matricula",
+								"codciclo"
+							],
+							"query": [
+								{
+									"key": "codCiclo",
+									"value": "1"
+								},
+								{
+									"key": "fechaDesde",
+									"value": "2025/01/03"
+								},
+								{
+									"key": "fechaHasta",
+									"value": "2025/03/03"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

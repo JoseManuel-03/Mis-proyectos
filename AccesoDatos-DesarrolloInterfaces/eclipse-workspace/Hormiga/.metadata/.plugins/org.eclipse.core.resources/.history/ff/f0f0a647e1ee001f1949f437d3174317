@@ -1,0 +1,16 @@
+package com.example.demo.services;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+public class RepetidosExceptionHandler {
+	
+	@ExceptionHandler(RepetidosException.class)
+	public ResponseEntity<String> handle(RepetidosException e){
+		return ResponseEntity
+	}
+	
+
+}

@@ -1,0 +1,32 @@
+package ceu.dam.javafx.examen.gui.controller;
+
+import javafx.fxml.FXML;
+
+public class InicioController extends AppController{
+	
+
+    @FXML
+    private MenuItem buscar;
+
+    @FXML
+    private MenuItem cerrarApp;
+
+    @FXML
+    private MenuItem cerrarCoche;
+
+    @FXML
+    private Label labelCoche;
+
+    @FXML
+    private Label labelDatos;
+
+    @FXML
+    private MenuItem nueva;
+
+    @FXML
+    private Menu reparaciones;
+
+    @FXML
+    private Menu salir;
+
+}

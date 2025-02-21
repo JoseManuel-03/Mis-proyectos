@@ -1,0 +1,103 @@
+package ceu.dam.javafx.examen.gui.controller;
+
+import java.util.List;
+import java.util.Observable;
+
+import ceu.dam.javafx.examen.model.Coche;
+import ceu.dam.javafx.examen.service.ExamenService;
+import ceu.dam.javafx.examen.service.NotFoundException;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+
+public class IdentificacionController extends AppController {
+
+	private ExamenService service;
+	private Coche coche;
+
+	@FXML
+	private Button botonConsultar;
+
+	@FXML
+	private ColorPicker colorPicker;
+
+	@FXML
+	private ComboBox<String> comboBox;
+
+	@FXML
+	private TextField textfield;
+
+	private ObservableList<String> datos;
+
+	@FXML
+	private void initialize() {
+		/*
+		 * datos = FXCollections.observableArrayList(); List<String> lista =
+		 * service.consultarMarcas(); Lo he intentado así pero no me sale, asi que los
+		 * voy a poner a mano para seguir adelante datos.setAll(lista);
+		 * comboBox.setItems(datos);
+		 */
+
+		comboBox.getItems().add("SEAT");
+		comboBox.getItems().add("TOYOTA");
+		comboBox.getItems().add("RENAULT");
+		comboBox.getItems().add("SEAT");
+		comboBox.getItems().add("BMV");
+		
+		coche = new Coche();
+		addParam(PARAM_MATRICULA, coche.getMatricula())
+
+	}
+
+	@FXML
+	void presionarConsultar(ActionEvent event) throws NotFoundException {
+		if (textfield.getText().isEmpty()) {
+			mostrarError("Es obligatorio indicar una matrícula");
+		}
+		if (comboBox.getItems().equals("MARCA")) {
+			mostrarError("Es obligatorio indicar una marca");
+		}
+		
+		consultar("1");
+	}
+
+	public void consultar(String texto) throws NotFoundException {
+		textfield.setText(texto);
+		service = new ExamenService();
+
+		Task<Coche> task = new Task<Coche>() {
+
+			@Override
+			protected Coche call() throws Exception {
+				return service.identificarCoche(textfield.getText(), comboBox.getSelectionModel().getSelectedItem(),
+						colorPicker.getValue());
+			}
+
+			@Override
+			protected void succeeded() {
+				Coche resultado = getValue();
+				if (resultado.getMatricula().equals(1)) {
+
+					changeScene(FXML_INICIO);
+				}
+			}
+
+			@Override
+			protected void failed() {
+				datos.clear();
+				mostrarError(new NotFoundException().getMessage());
+			}
+
+		};
+
+		new Thread(task).start();
+
+	}
+
+}

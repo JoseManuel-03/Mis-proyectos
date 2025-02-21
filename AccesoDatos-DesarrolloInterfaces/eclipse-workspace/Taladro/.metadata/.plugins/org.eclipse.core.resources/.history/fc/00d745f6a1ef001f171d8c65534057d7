@@ -1,0 +1,17 @@
+package ceu.dam.javafx.examen.gui.controller;
+
+public class NuevaReparacionController extends AppController {
+
+	@FXML
+	private Label labelCoche;
+
+	@FXML
+	private Label labelDatos;
+
+	@FXML
+	private Label labelNo;
+
+	@FXML
+	private Label labelNueva;
+
+}

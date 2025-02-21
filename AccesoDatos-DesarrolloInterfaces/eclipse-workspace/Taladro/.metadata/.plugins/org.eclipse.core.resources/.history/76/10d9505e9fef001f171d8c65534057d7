@@ -1,0 +1,54 @@
+package ceu.dam.javafx.examen.gui.controller;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
+
+public class InicioController extends AppController {
+
+	@FXML
+	private MenuItem buscar;
+
+	@FXML
+	private MenuItem cerrarApp;
+
+	@FXML
+	private MenuItem cerrarCoche;
+
+	@FXML
+	private Label labelCoche;
+
+	@FXML
+	private Label labelDatos;
+
+	@FXML
+	private MenuItem nueva;
+
+	@FXML
+	private Menu reparaciones;
+
+	@FXML
+	private Menu salir;
+
+	@FXML
+	void presionarBuscar(ActionEvent event) {
+
+	}
+
+	@FXML
+	void presionarCerrar(ActionEvent event) {
+
+	}
+
+	@FXML
+	void presionarCerrarApp(ActionEvent event) {
+
+	}
+
+	@FXML
+	void presionarNueva(ActionEvent event) {
+
+	}
+
+}

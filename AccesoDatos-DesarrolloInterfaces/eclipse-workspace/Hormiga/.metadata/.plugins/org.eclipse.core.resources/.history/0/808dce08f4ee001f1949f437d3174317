@@ -1,0 +1,141 @@
+package com.example.demo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.demo.model.Alumno;
+import com.example.demo.model.Asignatura;
+import com.example.demo.model.Ciclo;
+import com.example.demo.model.Tutor;
+import com.example.demo.services.MatriculasService;
+import com.example.demo.services.NoExisteException;
+import com.example.demo.services.RepetidosException;
+
+@SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class AppTests {
+
+	@Autowired
+	private MatriculasService matriculasService;
+
+	private Alumno alumno;
+
+	private Ciclo ciclo;
+
+	private Asignatura asignatura;
+
+	private Tutor tutor;
+
+	@BeforeEach
+	void initTest() {
+
+		Tutor tutor = new Tutor();
+		tutor.setNombre("Blas Poropo");
+		tutor.setEmail("blas@ceu.es");
+		Asignatura asignatura1 = new Asignatura();
+		asignatura1.setCodigo("ACD");
+		asignatura1.setNombre("Acceso a datos");
+		Asignatura asignatura2 = new Asignatura();
+		asignatura2.setCodigo("INT");
+		asignatura2.setNombre("Desarrollo de interfaces");
+		List<Asignatura> asignaturas = new ArrayList<>();
+		asignaturas.add(asignatura1);
+		asignaturas.add(asignatura2);
+		Ciclo ciclo = new Ciclo();
+		ciclo.setCodigo("DAM");
+		ciclo.setDescripcion("Ciclo Formativo de DESARROLLO DE APLICACIONES MULTIPLATAFORMA");
+		ciclo.setTutor(tutor);
+		ciclo.setAsignaturas(asignaturas);
+
+		alumno = new Alumno();
+		alumno.setId(2L);
+		alumno.setCiclo(ciclo);
+		alumno.setDni("3753723");
+		alumno.setFechaMatricula(LocalDate.now());
+		alumno.setNombreCompleto("PEPE");
+
+	}
+
+	@Test
+	@Order(1)
+	void testCrearCicloExitoso() throws RepetidosException {
+		
+		matriculasService.crearCiclo(ciclo);
+		assertNotNull(ciclo.getCodigo());
+	}
+
+
+	@Test
+	@Order(5)
+	void testconsultarAlumnoExistoso() {
+		matriculasService.consultarAlumno("3753723");
+	}
+
+	@Test
+	@Order(6)
+	void testconsultarAlumnoErroneo() {		
+		assertThrows(NoExisteException.class, () -> matriculasService.consultarAlumno("3753723"));
+	}
+
+	@Test
+	@Order(7)
+	void testconsultarCicloExistoso() {
+		assertThrows(null, null);
+		assertEquals(null, null);
+		assertNotNull();
+	}
+
+	@Test
+	@Order(8)
+	void testconsultarCicloErroneo() {
+		assertThrows(null, null);
+		assertEquals(null, null);
+		assertNotNull();
+	}
+
+	@Test
+	@Order(9)
+	void testcmatricularAlumnoExistoso() {
+		assertThrows(null, null);
+		assertEquals(null, null);
+		assertNotNull();
+	}
+
+	@Test
+	@Order(10)
+	void testmatricularAlumnoErroneo() {
+		assertThrows(null, null);
+		assertEquals(null, null);
+		assertNotNull();
+	}
+
+	@Test
+	@Order(11)
+	void testconsultarAlumnosMatriculadosExistoso() {
+		assertThrows(null, null);
+		assertEquals(null, null);
+		assertNotNull();
+	}
+
+	@Test
+	@Order(12)
+	void testconsultarAlumnosMatriculadosErroneo() {
+		assertThrows(null, null);
+		assertEquals(null, null);
+		assertNotNull();
+	}
+
+}

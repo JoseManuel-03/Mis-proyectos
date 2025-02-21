@@ -1,0 +1,216 @@
+package com.example.demo.services;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Alumno;
+import com.example.demo.model.Ciclo;
+import com.example.demo.repositories.AlumnoRepository;
+import com.example.demo.repositories.CicloRepository;
+
+import jakarta.transaction.Transactional;
+
+@Service
+public class MatriculasServiceImpl implements MatriculasService {
+
+	@Autowired
+	private AlumnoRepository alumnoRepository;
+
+	@Autowired
+	private CicloRepository cicloRepository;
+
+	/**
+	 * Este método debe consultar los datos del alumno a partir de su DNI en BBDD y
+	 * devolverlo. Vendrá con todos sus datos, incluyendo el ciclo con sus
+	 * asignaturas y su tutor. NOTA: un tutor sólo puede tutorizar un ciclo.
+	 * 
+	 * Si no existe el alumno, se lanzará NoExisteExcepcion.
+	 * 
+	 * Este método tendrá que estar también publicado en un API en la URL /alumno
+	 * con GET. El DNI se enviará por URL a continuación de /alumno/. Ejemplo:
+	 * /alumno/22222222B Si se lanza NoExisteException tendrá que devolver un 404
+	 * NOT FOUND con mensaje explicativo en el body
+	 * 
+	 * @param dni
+	 * @return
+	 * @throws NoExisteException
+	 */
+
+	@Override
+	public Alumno consultarAlumno(String dni) throws NoExisteException {
+
+		Ciclo ciclo;
+
+		Optional<Alumno> alumnoOpt = alumnoRepository.findOneByDni(dni);
+
+		if (!(alumnoOpt.isPresent())) {
+			throw new NoExisteException("No existe alumno indicado");
+		}
+
+		return alumnoOpt.get();
+	}
+
+	/**
+	 * Este método debe consultar los datos del ciclo a partir de su código en BBDD
+	 * y devolverlo. Vendrá con todos sus datos, incluyendo sus asignaturas y su
+	 * tutor. NOTA: un tutor sólo puede tutorizar un ciclo.
+	 * 
+	 * Si no existe el ciclo, se lanzará NoExisteExcepcion.
+	 * 
+	 * Este método tendrá que estar también publicado en un API en la URL /ciclo con
+	 * GET. El código se enviará por URL a continuación de /ciclo/. Ejemplo
+	 * /ciclo/DAM Si se lanza NoExisteException tendrá que devolver un 404 NOT FOUND
+	 * con mensaje explicativo en el body
+	 * 
+	 * @param codigo
+	 * @return
+	 * @throws NoExisteException
+	 */
+	@Override
+	public Ciclo consultarCiclo(String codigo) throws NoExisteException {
+
+		Optional<Ciclo> cicloOpt = cicloRepository.findOneByCodigo(codigo);
+
+		if (!(cicloOpt.isPresent())) {
+			throw new NoExisteException("No existe ciclo indicado");
+		}
+
+		return cicloOpt.get();
+
+	}
+
+	/**
+	 * Este método debe crear un ciclo en BBDD. Se creará el ciclo y todas sus
+	 * entidades asociadas. NOTA: un tutor sólo puede tutorizar un ciclo. Si ya
+	 * existe un ciclo con el mismo código, se lanzará RepetidosException. Si ya
+	 * existe un tutor con el mismo email, se lanzará RepetidosException. El ciclo y
+	 * sus entidades asociadas tienen que ser válidos de acuerdo a los comentarios
+	 * indicados en el modelo. Si ocurre algún error, no se guardará nada en BBDD.
+	 * Es decir, o se guarda el ciclo completo, o no se guarda nada
+	 * 
+	 * Este método tendrá que estar también publicado en un API en la URL /ciclo con
+	 * POST. El ciclo se enviará en el body de la petición. Se debe validar que
+	 * ciclo recibido en la petición cumpla todas las restricciones de validación.
+	 * Si no es válido, tendrá que devolver 400 BAD REQUEST con un mensaje indicando
+	 * qué atributo no es válido y por qué.
+	 * 
+	 * Si se lanza RepetidosException tendrá que devolver un 400 BAD REQUEST con
+	 * mensaje explicativo en el body
+	 * 
+	 * @param ciclo
+	 * @return
+	 * @throws RepetidosException
+	 */
+	@Override
+	@Transactional
+	public void crearCiclo(Ciclo ciclo) throws RepetidosException {
+
+		Optional<Ciclo> cicloOpt = cicloRepository.findById(ciclo.getCodigo());
+
+		Optional<Ciclo> autorOpt = cicloRepository.findOneByTutor(ciclo.getTutor());
+
+		if (cicloOpt.isPresent()) {
+			throw new RepetidosException("REPETIDO, ya existe un ciclo con ese codigo");
+		}
+
+		if (autorOpt.isPresent()) {
+			throw new RepetidosException("REPETIDO, ya existe un tutor con ese email");
+		}
+
+		cicloRepository.save(ciclo);
+
+	}
+
+	/**
+	 * Este método debe crear un alumno en BBDD que esté matriculado en el ciclo del
+	 * código recibido. Como fecha de matriculación se pondrá la fecha actual. Si ya
+	 * existe un alumno matriculado con ese DNI en la BBDD (aunque sea para otro
+	 * ciclo), se lanzará RepetidosException. Si NO existe un ciclo con el código
+	 * indicado, se lanzará NoExisteException.
+	 * 
+	 * Este método tendrá que estar también publicado en un API en la URL /matricula
+	 * con POST. Todos los datos se enviarán como parámetros de la petición.
+	 * Ejemplo: /matricula?dni=12345678Y&nombre=Lopez&codCiclo=DAM
+	 * 
+	 * Si se lanza RepetidosException tendrá que devolver un 400 BAD REQUEST con
+	 * mensaje explicativo en el body Si se lanza NoExisteException tendrá que
+	 * devolver un 404 NOT FOUND con mensaje explicativo en el body
+	 * 
+	 * @param dni, nombre, codCiclo
+	 * @return
+	 * @throws RepetidosException, NoExisteException
+	 */
+
+	@Override
+	public Alumno matricularAlumno(String dni, String nombre, String codCiclo)
+			throws NoExisteException, RepetidosException {
+
+		Optional<Alumno> alumnoOpt = alumnoRepository.findOneByDni(dni);
+
+		if (alumnoOpt.isPresent()) {
+			throw new RepetidosException("REPETIDO, ya existe un alumno con ese dni");
+		}
+
+		Alumno alumno = alumnoOpt.get();
+
+		alumno.setFechaMatricula(LocalDate.now());
+		alumno.setDni(dni);
+		alumno.setNombreCompleto(nombre);
+
+		if (alumno.getCiclo().getCodigo().equals(codCiclo)) {
+
+			alumnoRepository.save(alumno);
+			return alumno;
+
+		} else {
+			throw new NoExisteException("No existe ciclo con codigo indicado");
+		}
+
+	}
+
+	@Override
+	public List<Alumno> consultarAlumnosMatriculados(String codCiclo, LocalDate fechaDesde, LocalDate fechaHasta)
+			throws NoExisteException {
+		// METODO SOLO PARA PROBAR EL TEST
+		return new ArrayList<Alumno>();
+	}
+
+	/**
+	 * Este método consultará todos los alumnos matriculados en el curso con el
+	 * código indicado y cuya fecha de matrícula este entre las dos fechas enviadas.
+	 * Si NO existe un ciclo con el código indicado, se lanzará NoExisteException.
+	 * 
+	 * Este método tendrá que estar también publicado en un API en la URL
+	 * /matriculas con GET. El código de ciclo se enviará en la URL a continuación
+	 * de /matriculas/. El resto de datos (las fechas) se enviarán como parámetros
+	 * de la petición con formato dd-MM-yyyy. Ejemplo:
+	 * /matriculas/DAM?fechaDesde=01-02-2025&fechaHasta=01-03-2025
+	 * 
+	 * Si se lanza NoExisteException tendrá que devolver un 404 NOT FOUND con
+	 * mensaje explicativo en el body
+	 * 
+	 * @param codCiclo, fechaDesde, fechaHasta
+	 * @return
+	 * @throws NoExisteException
+	 */
+	/*
+	 * @Override public List<Alumno> consultarAlumnosMatriculados(String codCiclo,
+	 * LocalDate fechaDesde, LocalDate fechaHasta) throws NoExisteException {
+	 * //METODO BUENO, ESTA CONMENTADO, AL IGUAL QUE EN EL ALUMNO REPOSITORY,
+	 * PROBLEMA CON EL CODIGO. List<Alumno> lista =
+	 * alumnoRepository.findByCodigoBetween(codCiclo, fechaDesde, fechaHasta);
+	 * 
+	 * for (Alumno alumno : lista) { if
+	 * (!(alumno.getCiclo().getCodigo().equals(codCiclo))) { throw new
+	 * NoExisteException("No existe ciclo con codigo indicado"); } }
+	 * 
+	 * 
+	 * return lista; }
+	 */
+
+}

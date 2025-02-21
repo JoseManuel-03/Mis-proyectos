@@ -1,0 +1,5 @@
+package ceu.dam.javafx.examen;
+
+public class App extends Application{
+
+}

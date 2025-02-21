@@ -1,0 +1,18 @@
+package com.example.demo.api;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.services.MatriculasServiceImpl;
+import com.example.demo.services.NoExisteException;
+
+@RestController
+public class MatriculasApiService {
+	@Autowired
+	private MatriculasServiceImpl matriculasServiceImpl;
+	
+	public void consultarAlumno(String dni) throws NoExisteException {
+		matriculasServiceImpl.consultarAlumno(dni);
+	}
+
+}
